@@ -75,6 +75,7 @@
     top: 0;
     left: 0;
   }
+
   .inner1 {
     height: auto;
     width: auto;
@@ -127,6 +128,7 @@
     .inner {
       display: flex;
       gap: 145px;
+      align-items: center;
     }
     .title {
       position: relative;

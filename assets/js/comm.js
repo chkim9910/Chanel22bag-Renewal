@@ -39,21 +39,28 @@ $(document).ready(function () {
       pin: true,
       pinSpacing: false,
       scrub: true,
+      markers: true, // ScrollTrigger 디버깅용 마커 표시
     },
+    // onPin: () => {
+    //   console.log(".fix-box-2가 pin 되었습니다.");
+    // },
+    // onUnpin: () => {
+    //   console.log(".fix-box-2가 pin 되지 않았습니다.");
+    // },
     onStart: () => {
       console.log("sect02에 들어왔습니다.");
     },
   });
 
-  // gsap.to("#scene02 .page01", {
-  //   scrollTrigger: {
-  //     trigger: "#scene02",
-  //     start: "-600 top",
-  //     end: "bottom bottom",
-  //     scrub: true,
-  //     toggleClass: "on",
-  //   },
-  // });
+  gsap.to("#scene02 .page01", {
+    scrollTrigger: {
+      trigger: "#scene02",
+      start: "-600 top",
+      end: "bottom bottom",
+      scrub: true,
+      toggleClass: "on",
+    },
+  });
 
   // gsap.to("#scene02 .page02", {
   //   scrollTrigger: {

@@ -17,6 +17,7 @@
 .inner {
   max-width: 1280px;
   margin: 0 auto;
+  height: 100%;
 }
 #header {
   position: fixed;
@@ -51,6 +52,7 @@
   height: 1000vh;
   width: 100%;
   background: $black;
+
   .trigger-box-2 {
     height: 100%;
     width: 100%;
@@ -58,7 +60,6 @@
   .fix-box-2 {
     height: 100vh;
     display: flex;
-    position: relative;
   }
   .page {
     height: 100vh;

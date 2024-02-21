@@ -298,6 +298,7 @@ legend {
 .inner {
   max-width: 1280px;
   margin: 0 auto;
+  height: 100%;
 }
 
 #header {
@@ -339,7 +340,6 @@ legend {
 #scene02 .fix-box-2 {
   height: 100vh;
   display: flex;
-  position: relative;
 }
 #scene02 .page {
   height: 100vh;
@@ -485,6 +485,7 @@ legend {
 #scene02 .page01 .inner {
   display: flex;
   gap: 145px;
+  align-items: center;
 }
 #scene02 .page01 .title {
   position: relative;
