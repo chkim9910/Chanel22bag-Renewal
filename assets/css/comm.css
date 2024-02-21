@@ -345,7 +345,6 @@ legend {
 
 #intro {
   position: fixed;
-  z-index: 1000;
   width: 1920px;
   height: 100vh;
   overflow: hidden;
@@ -409,13 +408,14 @@ legend {
 
 #scene01 {
   position: relative;
-  height: 200vh;
-  background: url(../images/sect1/buildings-with-lights-landscape-high-angle.jpg) no-repeat 50% 50%/120%;
+  height: 250vh;
+  background: url(../images/sect1/buildings-with-lights-landscape-high-angle.jpg) no-repeat 50% 50%/200%;
+  z-index: 1;
 }
 #scene01:after {
   display: block;
   content: "";
-  height: 200vh;
+  height: 250vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   -webkit-backdrop-filter: blur(0.5px);
@@ -474,7 +474,14 @@ legend {
   background: url(../images/sect1/by-white.png) no-repeat -30px 57%/cover;
 }
 
+#scene02 #scene02_video {
+  position: fixed;
+  top: 0;
+  z-index: 0;
+  opacity: 0.6;
+}
 #scene02 .page01 {
+  width: 100vw;
   display: flex;
   align-items: center;
 }
@@ -506,8 +513,7 @@ legend {
   color: #fff;
 }
 #scene02 .page02 {
-  width: 2000px;
-  background: url(../images/sect2/제니1.png) no-repeat 0 0/cover;
+  width: 100vw;
   position: relative;
 }
 #scene02 .page02 .butterfly1 {
@@ -529,23 +535,24 @@ legend {
   opacity: 0.5;
 }
 #scene02 .page03 {
+  width: 200vw;
   position: relative;
+  background: #000;
 }
 #scene02 .page03 .old-house {
   position: absolute;
-  z-index: -1;
-  top: 57%;
-  left: -50px;
+  top: 58%;
+  left: -280px;
   width: 567px;
   height: 420px;
   background: url(../images/sect2/한옥-white.png) no-repeat 0 0/cover;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 #scene02 .page03 .jennie-img02 {
   width: 970px;
   height: 628px;
   background: url(../images/sect2/제니2.png) no-repeat 0 0/cover;
-  margin-left: 300px;
+  margin-left: 600px;
   position: relative;
 }
 #scene02 .page03 .jennie-img02:before {
@@ -558,7 +565,15 @@ legend {
   transform: scaleX(-1);
   position: absolute;
   top: 0;
-  left: -120px;
+  left: -200px;
+}
+#scene02 .page03 .cont {
+  font-family: "couture-it";
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  top: 30%;
+  right: 10%;
 }
 #scene02 .page03 .txt-deco {
   width: 545px;
@@ -571,21 +586,15 @@ legend {
   flex-direction: column;
   justify-content: end;
   padding-bottom: 90px;
-}
-#scene02 .page04 .cont {
-  width: 685px;
-  height: 204px;
-  word-wrap: normal;
-  word-break: keep-all;
-  font-family: "Pretendard-thin";
-  font-size: 30px;
-  line-height: 150%;
-  color: #fff;
+  background: #000;
 }
 #scene02 .page04 .jennie-img03 {
   width: 680px;
   height: 380px;
   background: url(../video/JENNIE-trim02.gif) no-repeat 0 0/cover;
+}
+#scene02 .page05 {
+  background: #000;
 }
 #scene02 .page05 .jennie-img04 {
   height: 100vh;

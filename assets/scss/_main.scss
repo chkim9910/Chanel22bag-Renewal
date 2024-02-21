@@ -1,6 +1,6 @@
 #intro {
   position: fixed;
-  z-index: 1000;
+  // z-index: 1000;
   width: 1920px;
   height: 100vh;
   overflow: hidden;
@@ -60,14 +60,15 @@
 
 #scene01 {
   position: relative;
-  height: 200vh;
+  height: 250vh;
   background: url(../images/sect1/buildings-with-lights-landscape-high-angle.jpg)
-    no-repeat 50% 50% / 120%;
+    no-repeat 50% 50% / 200%;
+  z-index: 1;
 
   &:after {
     display: block;
     content: "";
-    height: 200vh;
+    height: 250vh;
     width: 100%;
     background: rgb(0, 0, 0, 0.4);
     backdrop-filter: blur(0.5px);
@@ -122,7 +123,14 @@
 }
 
 #scene02 {
+  #scene02_video {
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    opacity: 0.6;
+  }
   .page01 {
+    width: 100vw;
     display: flex;
     align-items: center;
     .inner {
@@ -149,9 +157,11 @@
     }
   }
   .page02 {
-    width: 2000px;
-    background: url(../images/sect2/제니1.png) no-repeat 0 0 / cover;
+    width: 100vw;
+
+    // background: url(../images/sect2/제니1.png) no-repeat 0 0 / cover;
     position: relative;
+
     .butterfly1 {
       position: absolute;
       top: 40%;
@@ -174,22 +184,24 @@
     }
   }
   .page03 {
+    width: 200vw;
     position: relative;
+    background: $black;
     .old-house {
       position: absolute;
-      z-index: -1;
-      top: 57%;
-      left: -50px;
+      // z-index: -1;
+      top: 58%;
+      left: -280px;
       width: 567px;
       height: 420px;
       background: url(../images/sect2/한옥-white.png) no-repeat 0 0 / cover;
-      opacity: 0.5;
+      opacity: 0.3;
     }
     .jennie-img02 {
       width: 970px;
       height: 628px;
       background: url(../images/sect2/제니2.png) no-repeat 0 0 / cover;
-      margin-left: 300px;
+      margin-left: 600px;
       position: relative;
       &:before {
         content: "";
@@ -202,8 +214,18 @@
         transform: scaleX(-1);
         position: absolute;
         top: 0;
-        left: -120px;
+        left: -200px;
       }
+    }
+    .cont {
+      // width: 685px;
+      // height: 204px;
+      // word-wrap: normal;
+      // word-break: keep-all;
+      @include tit-it(24px);
+      position: absolute;
+      top: 30%;
+      right: 10%;
     }
     .txt-deco {
       width: 545px;
@@ -217,13 +239,7 @@
     flex-direction: column;
     justify-content: end;
     padding-bottom: 90px;
-    .cont {
-      width: 685px;
-      height: 204px;
-      word-wrap: normal;
-      word-break: keep-all;
-      @include cont-thin(30px);
-    }
+    background: $black;
     .jennie-img03 {
       width: 680px;
       height: 380px;
@@ -231,6 +247,7 @@
     }
   }
   .page05 {
+    background: $black;
     .jennie-img04 {
       height: 100vh;
       background: url(../images/sect2/제니-profile.mp4) no-repeat 0 0 / cover;

@@ -3,9 +3,11 @@ $(document).ready(function () {
   // 페이지가 로드될 때 스크롤을 맨 위로 이동
   window.onload = function () {
     window.scrollTo(0, 0);
-    $("body").css("overflow", "hidden");
+    // 주석 풀기
+    // $("body").css("overflow", "hidden");
   };
   // intro
+  // 주석 풀기
   $("#intro .btn-icon").on("click", function () {
     var a = document.getElementById("intro_video_inner");
     a.pause();
@@ -36,6 +38,23 @@ $(document).ready(function () {
     },
   });
 
+  const video02 = document.querySelector("#scene02_video");
+  gsap.to("#scene02", {
+    scrollTrigger: {
+      trigger: "#scene02",
+      start: "-500 top",
+      end: "bottom bottom",
+      scrub: true,
+      onEnter: () => {
+        video02.play();
+      },
+      onLeaveBack: () => {
+        video02.currentTime = 0;
+        video02.pause();
+      },
+    },
+  });
+
   // gsap.to(".fix-box-2", {
   //   x: -(sect02_total - innerWidth),
   //   scrollTrigger: {
@@ -59,11 +78,12 @@ $(document).ready(function () {
 
   // gsap.to("#scene02 .page01", {
   //   scrollTrigger: {
-  //     trigger: "#scene02",
-  //     start: "-600 top",
-  //     end: "bottom bottom",
+  //     trigger: "#scene02 .page01",
+  //     start: "top top",
+  //     end: "+=2000",
+  //     pin: true,
   //     scrub: true,
-  //     toggleClass: "on",
+  //     // toggleClass: "on",
   //   },
   // });
 
