@@ -248,9 +248,12 @@
   }
   .page05 {
     background: $black;
-    .jennie-img04 {
+    width: 1720px;
+    // height: 866px;
+    background: url(../images/sect2/제니1.png) no-repeat 0 0 / cover;
+    #jennie-img04 {
       height: 100vh;
-      background: url(../images/sect2/제니-profile.mp4) no-repeat 0 0 / cover;
+      margin-left: 1080px;
     }
   }
 }

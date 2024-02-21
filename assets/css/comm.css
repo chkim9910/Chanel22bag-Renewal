@@ -595,8 +595,10 @@ legend {
 }
 #scene02 .page05 {
   background: #000;
+  width: 1720px;
+  background: url(../images/sect2/제니1.png) no-repeat 0 0/cover;
 }
-#scene02 .page05 .jennie-img04 {
+#scene02 .page05 #jennie-img04 {
   height: 100vh;
-  background: url(../images/sect2/제니-profile.mp4) no-repeat 0 0/cover;
+  margin-left: 1080px;
 }/*# sourceMappingURL=comm.css.map */
