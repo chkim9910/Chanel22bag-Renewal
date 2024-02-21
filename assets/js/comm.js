@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  // 페이지가 로드될 때 스크롤을 맨 위로 이동
+  window.onload = function () {
+    window.scrollTo(0, 0);
+    $("body").css("overflow", "hidden");
+  };
   // intro
   $("#intro .btn-icon").on("click", function () {
     var a = document.getElementById("intro_video_inner");
@@ -11,7 +16,8 @@ $(document).ready(function () {
         width: "100%",
         position: "static",
         duration: 0.6,
-      });
+      })
+      .to($("body"), { overflow: "visible" });
   });
 
   let sectionCount = $(".fix-box-2 .page");
