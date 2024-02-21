@@ -184,7 +184,7 @@
     }
   }
   .page03 {
-    width: 200vw;
+    width: 240vw;
     position: relative;
     background: $black;
     .old-house {
@@ -218,14 +218,25 @@
       }
     }
     .cont {
-      // width: 685px;
-      // height: 204px;
-      // word-wrap: normal;
-      // word-break: keep-all;
       @include tit-it(24px);
       position: absolute;
-      top: 30%;
-      right: 10%;
+      top: 33%;
+      right: 25%;
+    }
+    .jennie-img03 {
+      width: 680px;
+      height: 380px;
+      background: url(../video/JENNIE-trim02.gif) no-repeat 0 0 / cover;
+      position: absolute;
+      bottom: 5%;
+      right: 28%;
+    }
+    #jennie-img03 {
+      height: 900px;
+      width: 800px;
+      position: absolute;
+      top: 0;
+      right: -2%;
     }
     .txt-deco {
       width: 545px;
@@ -240,20 +251,20 @@
     justify-content: end;
     padding-bottom: 90px;
     background: $black;
-    .jennie-img03 {
-      width: 680px;
-      height: 380px;
-      background: url(../video/JENNIE-trim02.gif) no-repeat 0 0 / cover;
-    }
+    // .jennie-img03 {
+    //   width: 680px;
+    //   height: 380px;
+    //   background: url(../video/JENNIE-trim02.gif) no-repeat 0 0 / cover;
+    // }
   }
   .page05 {
     background: $black;
     width: 1720px;
     // height: 866px;
     background: url(../images/sect2/제니1.png) no-repeat 0 0 / cover;
-    #jennie-img04 {
-      height: 100vh;
-      margin-left: 1080px;
-    }
+    // #jennie-img04 {
+    //   height: 100vh;
+    //   margin-left: 1080px;
+    // }
   }
 }
