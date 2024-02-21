@@ -213,22 +213,28 @@
       padding-bottom: 100px;
     }
     .cont {
-      width: 685px;
-      height: 204px;
-      word-wrap: normal;
-      word-break: keep-all;
-      @include cont-thin(30px);
+      // width: 685px;
+      // height: 204px;
+      // word-wrap: normal;
+      // word-break: keep-all;
+      @include tit-it(24px);
     }
     .jennie-img03 {
       width: 680px;
       height: 380px;
       background: url(../video/JENNIE-trim02.gif) no-repeat 0 0 / cover;
     }
+    #jennie-img03 {
+      position: absolute;
+      top: 0;
+      right: -5%;
+      height: 900px;
+      width: 700px;
+    }
   }
   .page05 {
     .jennie-img04 {
       height: 100vh;
-      background: url(../images/sect2/제니-profile.mp4) no-repeat 0 0 / cover;
     }
   }
 }
