@@ -1,0 +1,155 @@
+#intro {
+  position: fixed;
+  z-index: 1000;
+  width: 1920px;
+  height: 100vh;
+  overflow: hidden;
+  top: 0 !important;
+  background: $black;
+  #intro_video {
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+    top: 0;
+    overflow: hidden;
+    filter: grayscale(100%);
+  }
+
+  .tit {
+    width: 460px;
+    position: absolute;
+    top: 45%;
+    left: calc(100vw / 2);
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .txt1 {
+    @include tit(54px);
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  .txt2 {
+    @include cont(20px);
+    line-height: 120%;
+    color: $white;
+  }
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 10%;
+    left: calc(100vw / 2);
+    transform: translateX(-50%);
+  }
+  .btn-icon {
+    width: 70px;
+    height: 70px;
+    background: url(../images/intro/intro-button-white@4x.png) no-repeat 50% 50% /
+      cover;
+  }
+  .btn-desc {
+    @include cont(14px);
+    color: $white;
+  }
+}
+
+#scene01 {
+  position: relative;
+  height: 200vh;
+  background: url(../images/sect1/buildings-with-lights-landscape-high-angle.jpg)
+    no-repeat 50% 50% / 120%;
+
+  &:after {
+    display: block;
+    content: "";
+    height: 200vh;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.4);
+    backdrop-filter: blur(0.5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .inner1 {
+    height: auto;
+    width: auto;
+    position: relative;
+    top: 200px;
+    display: flex;
+  }
+  .inner2 {
+    height: auto;
+    width: auto;
+    position: relative;
+    top: 50vh;
+    display: flex;
+  }
+  .content1,
+  .content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include cont(18px);
+    @include posRel;
+    margin-left: auto;
+  }
+  .content2 {
+    margin-right: auto;
+  }
+  .poster1 {
+    width: 490px;
+    height: 617px;
+    background: url(../images/sect1/휘트니2.png) no-repeat 0 0 / contain;
+    @include posRel;
+  }
+  .poster2 {
+    width: 550px;
+    height: 690px;
+    background: url(../images/sect1/릴리로즈2.png) no-repeat 0 0 / contain;
+    @include posRel;
+  }
+  .highlight {
+    width: 480px;
+    height: 100px;
+    background: url(../images/sect1/by-white.png) no-repeat -30px 57% / cover;
+  }
+}
+
+#scene02 {
+  .page01 {
+    display: flex;
+    align-items: center;
+    .inner {
+      display: flex;
+      gap: 145px;
+    }
+    .title {
+      position: relative;
+    }
+    .tit {
+      @include tit-it(60px);
+    }
+    .deco {
+      position: absolute;
+      top: 24%;
+      right: -110px;
+      width: 192px;
+      height: 122px;
+      background: url(../images//sect2/jennie.png) no-repeat 0 0 / cover;
+    }
+    .cont {
+      @include cont-thin(20px);
+    }
+  }
+  .page02 {
+    width: 2000px;
+    background: url(../images/sect2/제니1.png) no-repeat 0 0 / cover;
+    .jennie-img01 {
+    }
+  }
+}
