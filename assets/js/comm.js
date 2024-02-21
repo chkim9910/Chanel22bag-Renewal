@@ -19,11 +19,18 @@ $(document).ready(function () {
     window.scrollTo(0, 0);
   });
 
-  let sectionCount = $("#scene02 .fix-box-2 .page");
+  let section02Count = $("#scene02 .fix-box-2 .page");
   let sect02_total = 0;
 
-  for (let i = 0; i < sectionCount.length; i++) {
+  for (let i = 0; i < section02Count.length; i++) {
     sect02_total += $(".fix-box-2 .page").eq(i).width();
+  }
+
+  let section03Count = $("#scene03 .fix-box-3 .page");
+  let sect03_total = 0;
+
+  for (let i = 0; i < section03Count.length; i++) {
+    sect03_total += $(".fix-box-3 .page").eq(i).width();
   }
 
   gsap.to(".fix-box-2", {
@@ -39,6 +46,7 @@ $(document).ready(function () {
   });
 
   const video02 = document.querySelector("#scene02_video");
+  const video03 = document.querySelector("#scene03_video");
   gsap.to("#scene02", {
     scrollTrigger: {
       trigger: "#scene02",
@@ -55,6 +63,22 @@ $(document).ready(function () {
     },
   });
 
+  gsap.to("#scene02", {
+    scrollTrigger: {
+      trigger: "#scene02",
+      start: "bottom center",
+      end: "+=100%",
+      scrub: true,
+      onEnter: () => {
+        video03.play();
+      },
+      onLeaveBack: () => {
+        video03.currentTime = 0;
+        video03.pause();
+      },
+    },
+  });
+
   const sect02tl = gsap.timeline();
   ScrollTrigger.create({
     animation: sect02tl,
@@ -63,14 +87,16 @@ $(document).ready(function () {
     end: "center center",
     scrub: 1,
   });
-  sect02tl.fromTo(
-    video02,
-    { opacity: 0.6 },
-    {
-      opacity: 0,
-    },
-    0
-  );
+  sect02tl
+    .fromTo(
+      video02,
+      { opacity: 0.6 },
+      {
+        opacity: 0,
+      },
+      0
+    )
+    .to(video03, { opacity: 0.8 });
 
   // gsap.to(".fix-box-2", {
   //   x: -(sect02_total - innerWidth),

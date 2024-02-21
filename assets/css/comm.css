@@ -481,6 +481,9 @@ legend {
   z-index: 0;
   opacity: 0.6;
 }
+#scene02 .trigger-box-2 {
+  z-index: 1;
+}
 #scene02 .page01 {
   width: 100vw;
   display: flex;
