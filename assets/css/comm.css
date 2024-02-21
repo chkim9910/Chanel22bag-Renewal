@@ -508,10 +508,86 @@ legend {
 #scene02 .page02 {
   width: 2000px;
   background: url(../images/sect2/제니1.png) no-repeat 0 0/cover;
+  position: relative;
 }
 #scene02 .page02 .butterfly1 {
-  background: url(../images/sect2/butterfly2-white.png) no-repeat 0 0/cover;
+  position: absolute;
+  top: 40%;
+  left: -1%;
+  width: 253px;
+  height: 273px;
+  background: url(../images/sect2/butterfly3-white.png) no-repeat 0 0/cover;
+  opacity: 0.8;
 }
 #scene02 .page02 .butterfly2 {
+  position: absolute;
+  top: 60%;
+  left: -17%;
+  width: 340px;
+  height: 330px;
+  background: url(../images/sect2/butterfly2-white.png) no-repeat 0 0/cover;
+  opacity: 0.5;
+}
+#scene02 .page03 {
+  position: relative;
+}
+#scene02 .page03 .old-house {
+  position: absolute;
+  z-index: -1;
+  top: 57%;
+  left: -50px;
+  width: 567px;
+  height: 420px;
+  background: url(../images/sect2/한옥-white.png) no-repeat 0 0/cover;
+  opacity: 0.5;
+}
+#scene02 .page03 .jennie-img02 {
+  width: 970px;
+  height: 628px;
+  background: url(../images/sect2/제니2.png) no-repeat 0 0/cover;
+  margin-left: 300px;
+  position: relative;
+}
+#scene02 .page03 .jennie-img02:before {
+  content: "";
+  display: block;
+  width: 220px;
+  height: 236px;
   background: url(../images/sect2/butterfly3-white.png) no-repeat 0 0/cover;
+  opacity: 0.8;
+  transform: scaleX(-1);
+  position: absolute;
+  top: 0;
+  left: -120px;
+}
+#scene02 .page03 .txt-deco {
+  width: 545px;
+  height: 180px;
+  background: url(../images/sect2/yeah.png) no-repeat 0 0/cover;
+  transform: rotate(10deg);
+}
+#scene02 .page04 {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 90px;
+}
+#scene02 .page04 .cont {
+  width: 685px;
+  height: 204px;
+  word-wrap: normal;
+  word-break: keep-all;
+  font-family: "Pretendard-thin";
+  font-size: 30px;
+  line-height: 150%;
+  color: #fff;
+}
+#scene02 .page04 .jennie-img03 {
+  width: 680px;
+  height: 380px;
+  background: url(../video/JENNIE-trim02.gif) no-repeat 0 0/cover;
+}
+#scene02 .page05 .jennie-img04 {
+  height: 100vh;
+  background: url(../images/sect2/제니-profile.mp4) no-repeat 0 0/cover;
 }/*# sourceMappingURL=comm.css.map */
