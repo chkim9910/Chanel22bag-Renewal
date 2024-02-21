@@ -289,12 +289,6 @@ legend {
   background: #000;
 }
 
-.scrollBox .wrap > div {
-  width: 1920px;
-  /*   position: relative;
-  top: 100vh; */
-}
-
 .inner {
   max-width: 1280px;
   margin: 0 auto;
@@ -329,8 +323,9 @@ legend {
 }
 
 #scene02 {
+  width: 100vw;
+  position: relative;
   height: 1000vh;
-  width: 100%;
   background: #000;
 }
 #scene02 .trigger-box-2 {
@@ -345,6 +340,7 @@ legend {
   height: 100vh;
   flex-shrink: 0;
   width: 100vw;
+  position: relative;
 }
 
 #intro {
