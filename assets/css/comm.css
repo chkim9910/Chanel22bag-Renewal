@@ -411,7 +411,7 @@ legend {
   position: relative;
   height: 250vh;
   background: url(../images/sect1/buildings-with-lights-landscape-high-angle.jpg) no-repeat 50% 50%/200%;
-  z-index: 1;
+  z-index: 10;
 }
 #scene01:after {
   display: block;
@@ -585,7 +585,7 @@ legend {
   right: 28%;
 }
 #scene02 .page03 #jennie-img03 {
-  height: 900px;
+  height: 800px;
   width: 800px;
   position: absolute;
   top: 0;
@@ -596,4 +596,11 @@ legend {
   height: 180px;
   background: url(../images/sect2/yeah.png) no-repeat 0 0/cover;
   transform: rotate(10deg);
+}
+
+#scene03 #scene03_video {
+  position: fixed;
+  top: 0;
+  z-index: 0;
+  opacity: 0;
 }/*# sourceMappingURL=comm.css.map */

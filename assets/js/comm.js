@@ -19,7 +19,7 @@ $(document).ready(function () {
     window.scrollTo(0, 0);
   });
 
-  let sectionCount = $(".fix-box-2 .page");
+  let sectionCount = $("#scene02 .fix-box-2 .page");
   let sect02_total = 0;
 
   for (let i = 0; i < sectionCount.length; i++) {
@@ -54,6 +54,23 @@ $(document).ready(function () {
       },
     },
   });
+
+  const sect02tl = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sect02tl,
+    trigger: "#section02",
+    start: "center center",
+    end: "center center",
+    scrub: 1,
+  });
+  sect02tl.fromTo(
+    video02,
+    { opacity: 0.6 },
+    {
+      opacity: 0,
+    },
+    0
+  );
 
   // gsap.to(".fix-box-2", {
   //   x: -(sect02_total - innerWidth),
