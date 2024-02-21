@@ -4,7 +4,7 @@ $(document).ready(function () {
   window.onload = function () {
     window.scrollTo(0, 0);
     // 주석 풀기
-    // $("body").css("overflow", "hidden");
+    $("body").css("overflow", "hidden");
   };
   // intro
   // 주석 풀기

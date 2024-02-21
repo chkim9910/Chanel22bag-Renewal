@@ -345,6 +345,7 @@ legend {
 
 #intro {
   position: fixed;
+  z-index: 1000;
   width: 1920px;
   height: 100vh;
   overflow: hidden;
@@ -595,16 +596,4 @@ legend {
   height: 180px;
   background: url(../images/sect2/yeah.png) no-repeat 0 0/cover;
   transform: rotate(10deg);
-}
-#scene02 .page04 {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  padding-bottom: 90px;
-  background: #000;
-}
-#scene02 .page05 {
-  background: #000;
-  width: 1720px;
-  background: url(../images/sect2/제니1.png) no-repeat 0 0/cover;
 }/*# sourceMappingURL=comm.css.map */
