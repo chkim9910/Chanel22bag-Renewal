@@ -4,6 +4,7 @@ $(document).ready(function () {
     window.scrollTo(0, 0);
     $("body").css("overflow", "hidden");
   };
+  gsap.set($(".scrollBox .wrap > div").not("#intro"), { yPercent: 100 });
   // intro
   $("#intro .btn-icon").on("click", function () {
     var a = document.getElementById("intro_video_inner");
@@ -13,11 +14,11 @@ $(document).ready(function () {
     tl.to([$("#intro")], { height: 0, duration: 1 }, 2)
       .to($("#header"), { top: "0px" })
       .to($(".scrollBox .wrap > div").not("#intro"), {
-        width: "100%",
-        position: "static",
+        yPercent: 0,
         duration: 0.6,
       })
       .to($("body"), { overflow: "visible" });
+    window.scrollTo(0, 0);
   });
 
   let sectionCount = $(".fix-box-2 .page");
@@ -38,6 +39,9 @@ $(document).ready(function () {
       pin: true,
       pinSpacing: false,
       scrub: true,
+    },
+    onStart: () => {
+      console.log("sect02에 들어왔습니다.");
     },
   });
 

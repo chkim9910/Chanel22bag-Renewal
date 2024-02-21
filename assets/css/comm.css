@@ -291,8 +291,8 @@ legend {
 
 .scrollBox .wrap > div {
   width: 1920px;
-  position: fixed;
-  top: 100vh;
+  /*   position: relative;
+  top: 100vh; */
 }
 
 .inner {
@@ -339,6 +339,7 @@ legend {
 #scene02 .fix-box-2 {
   height: 100vh;
   display: flex;
+  position: relative;
 }
 #scene02 .page {
   height: 100vh;
@@ -510,4 +511,10 @@ legend {
 #scene02 .page02 {
   width: 2000px;
   background: url(../images/sect2/제니1.png) no-repeat 0 0/cover;
+}
+#scene02 .page02 .butterfly1 {
+  background: url(../images/sect2/butterfly2-white.png) no-repeat 0 0/cover;
+}
+#scene02 .page02 .butterfly2 {
+  background: url(../images/sect2/butterfly3-white.png) no-repeat 0 0/cover;
 }/*# sourceMappingURL=comm.css.map */
