@@ -49,7 +49,7 @@ $(document).ready(function () {
       end: "bottom bottom",
       pin: true,
       pinSpacing: false,
-      scrub: true,
+      scrub: 2,
     },
   });
 
@@ -117,7 +117,7 @@ $(document).ready(function () {
       end: "bottom bottom",
       pin: true,
       pinSpacing: false,
-      scrub: true,
+      scrub: 2,
     },
   });
 
@@ -164,7 +164,7 @@ $(document).ready(function () {
       end: "bottom bottom",
       pin: true,
       pinSpacing: false,
-      scrub: true,
+      scrub: 1,
     },
   });
 
@@ -211,7 +211,10 @@ $(document).ready(function () {
       end: "bottom bottom",
       pin: true,
       pinSpacing: false,
-      scrub: true,
+      scrub: 2,
+    },
+    onComplete: () => {
+      $(".trigger-box-5").css("display", "none");
     },
   });
 

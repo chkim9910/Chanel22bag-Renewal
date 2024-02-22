@@ -577,14 +577,15 @@
       left: 90px;
       width: 646px;
       height: 844px;
+      transform: rotate(-8deg);
       background: url(../images/sect6/bag-pinkv2.png) no-repeat 0 0 / cover;
     }
     .bag02 {
       position: absolute;
-      top: 0;
+      top: -200px;
       right: -250px;
-      width: 1220px;
-      height: 1030px;
+      width: 1500px;
+      height: 1230px;
       transform: rotate(15deg);
       background: url(../images/sect6/bag-mintv2.png) no-repeat 0 0 / cover;
     }
@@ -602,6 +603,15 @@
       background: #f1f1f1;
       .inner {
         display: flex;
+      }
+      .by {
+        width: 522px;
+        height: 110px;
+        background: url(../images/sect1/by-black.png) no-repeat 50% 50% / cover;
+        position: absolute;
+        bottom: 180px;
+        right: -160px;
+        opacity: 0.7;
       }
       .bag03 {
         width: 600px;
@@ -627,7 +637,7 @@
     .sect3 {
       height: 726px;
       display: flex;
-      background: #f1f1f1;
+      // background: #f1f1f1;
       .inner {
         display: flex;
         position: relative;
@@ -661,7 +671,7 @@
       height: 626px;
       margin-top: 100px;
       display: flex;
-
+      background: #f1f1f1;
       .inner {
         display: flex;
       }
@@ -703,6 +713,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      position: relative;
     }
     .tit {
       @include tit(42px);
