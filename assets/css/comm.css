@@ -834,7 +834,7 @@ legend {
   opacity: 0.5;
 }
 #scene04 .page03 {
-  width: 3500px;
+  width: 3800px;
   padding-left: 300px;
   position: relative;
   background: #000;
@@ -879,7 +879,7 @@ legend {
   width: 49vw;
   position: absolute;
   top: 0;
-  right: -2%;
+  right: 6%;
   transform: translateY(calc(50vh - 50%));
 }
 #scene04 .page03 .txt-deco {

@@ -53,6 +53,7 @@ $(document).ready(function () {
   const video02 = document.querySelector("#scene02_video");
   const video03 = document.querySelector("#scene03_video");
   const video04 = document.querySelector("#scene04_video");
+  const video05 = document.querySelector("#scene05_video");
 
   gsap.to("#scene02", {
     scrollTrigger: {

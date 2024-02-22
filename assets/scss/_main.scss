@@ -380,7 +380,7 @@
     }
   }
   .page03 {
-    width: 3500px;
+    width: 3800px;
     padding-left: 300px;
     position: relative;
     background: $black;
@@ -429,7 +429,8 @@
       // width: 800px;
       position: absolute;
       top: 0;
-      right: -2%;
+      right: 6%;
+      // right: -2%;
       transform: translateY(calc(100vh / 2 + -50%));
     }
     .txt-deco {
