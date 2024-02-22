@@ -194,8 +194,8 @@
       position: absolute;
       // z-index: -1;
       top: 58%;
-      left: -280px;
-      width: 567px;
+      // left: -280px;
+      width: 597px;
       height: 420px;
       background: url(../images/sect2/한옥-white.png) no-repeat 0 0 / cover;
       opacity: 0.3;
@@ -220,19 +220,32 @@
         left: -200px;
       }
     }
+    .set {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 800px;
+      position: absolute;
+      top: 10px;
+      left: 1990px;
+      justify-content: end;
+      gap: 20px;
+      padding-bottom: 100px;
+    }
     .cont {
       @include tit-it(24px);
-      position: absolute;
-      top: 33%;
-      right: 25%;
+      // position: absolute;
+      // top: 320px;
+      // top: 33%;
+      // right: 25%;
     }
     .jennie-img03 {
       width: 680px;
       height: 380px;
       background: url(../video/JENNIE-trim02.gif) no-repeat 0 0 / cover;
-      position: absolute;
-      bottom: 5%;
-      right: 28%;
+      // position: absolute;
+      // bottom: 100px;
+      // left: 0;
     }
     #jennie-img03 {
       height: 49vw;
@@ -245,10 +258,16 @@
       transform: translateY(calc(100vh / 2 + -50%));
     }
     .txt-deco {
-      width: 545px;
-      height: 180px;
+      position: absolute;
+      bottom: 70px;
+      left: 100px;
+      width: 715px;
+      height: 220px;
+      transform: rotate(8deg);
+      // width: 545px;
+      // height: 180px;
+      // transform: rotate(10deg);
       background: url(../images/sect2/yeah.png) no-repeat 0 0 / cover;
-      transform: rotate(10deg);
     }
   }
 }
