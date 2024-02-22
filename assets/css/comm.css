@@ -938,4 +938,133 @@ legend {
 #scene05 .page01 .deco {
   right: -139px;
   width: 256px;
+}
+#scene05 .page01-2 {
+  width: 900px;
+}
+#scene05 .page02 {
+  position: relative;
+}
+#scene05 .page02 .margaret-img01 {
+  height: 100vh;
+  background: url(../images/sect5/margaret01.jpg) no-repeat 0 0/cover;
+}
+#scene05 .page02 .margaret-img02 {
+  width: 562px;
+  height: 750px;
+  background: url(../images/sect5/margaret02.png) no-repeat 0 0/cover;
+  position: absolute;
+  top: 100px;
+  right: -240px;
+  z-index: 1;
+}
+#scene05 .page02 .margaret-img02:before {
+  content: "";
+  display: block;
+  width: 164px;
+  height: 90px;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  z-index: 2;
+  background: url(../images/sect5/grass@4x.png) no-repeat 0 0/cover;
+}
+#scene05 .page02 .margaret-img02:after {
+  content: "";
+  display: block;
+  width: 124px;
+  height: 70px;
+  position: absolute;
+  bottom: 80px;
+  right: -150px;
+  z-index: 2;
+  background: url(../images/sect5/grass@4x.png) no-repeat 0 0/cover;
+  opacity: 0.8;
+}
+#scene05 .page03 {
+  width: 3500px;
+  position: relative;
+  background: #000;
+}
+#scene05 .page03 .set {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 800px;
+  position: absolute;
+  top: 10px;
+  left: 700px;
+  justify-content: start;
+  gap: 20px;
+  padding-top: 100px;
+}
+#scene05 .page03 .cont {
+  font-family: "couture-it";
+  font-size: 24px;
+  color: #fff;
+}
+#scene05 .page03 .margaret-img03 {
+  width: 680px;
+  height: 380px;
+  background: url(../video/margaret-trim01.gif) no-repeat 0 0/cover;
+}
+#scene05 .page03 .margaret-img04 {
+  width: 980px;
+  height: 564px;
+  margin-left: 1780px;
+  background: url(../images/sect5/bg.jpg) no-repeat 0 0/cover;
+  opacity: 0.6;
+}
+#scene05 .page03 .margaret-img05 {
+  width: 651px;
+  height: 420px;
+  position: absolute;
+  left: 1840px;
+  bottom: 110px;
+  background: url(../images/sect5/margaret03.png) no-repeat 0 0/cover;
+}
+#scene05 .page03 #margaret-img06 {
+  height: 49vw;
+  width: 49vw;
+  position: absolute;
+  top: 0;
+  right: -2%;
+  transform: translateY(calc(50vh - 50%));
+}
+
+#scene06 {
+  height: 300vh;
+}
+#scene06 .page01 {
+  height: 100vh;
+  width: 100vw;
+  background: #f8f8f8;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  z-index: 0;
+}
+#scene06 .page01 .bag01 {
+  position: absolute;
+  top: -70px;
+  left: 90px;
+  width: 646px;
+  height: 844px;
+  background: url(../images/sect6/bag-pinkv2.png) no-repeat 0 0/cover;
+}
+#scene06 .page01 .bag02 {
+  position: absolute;
+  top: 0;
+  right: -250px;
+  width: 1220px;
+  height: 1030px;
+  transform: rotate(15deg);
+  background: url(../images/sect6/bag-mintv2.png) no-repeat 0 0/cover;
+}
+#scene06 .page02 {
+  height: 200vh;
+  position: fixed;
+  z-index: 0;
+  top: 100vh;
+  background: #f8f8f8;
 }/*# sourceMappingURL=comm.css.map */

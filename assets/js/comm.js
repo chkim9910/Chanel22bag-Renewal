@@ -31,13 +31,14 @@ $(document).ready(function () {
   for (let i = 0; i < section02Count.length; i++) {
     sect02_total += $("#scene02 .fix-box-2 .page").eq(i).width();
   }
-
   for (let i = 0; i < section03Count.length; i++) {
     sect03_total += $("#scene03 .fix-box-3 .page").eq(i).width();
   }
-
   for (let i = 0; i < section04Count.length; i++) {
     sect04_total += $("#scene04 .fix-box-4 .page").eq(i).width();
+  }
+  for (let i = 0; i < section05Count.length; i++) {
+    sect05_total += $("#scene05 .fix-box-5 .page").eq(i).width();
   }
 
   gsap.to(".fix-box-2", {
@@ -128,7 +129,16 @@ $(document).ready(function () {
     end: "center center",
     scrub: 1,
   });
-  sect03tl.to(video04, { opacity: 0.6 });
+  sect03tl
+    .fromTo(
+      video03,
+      { opacity: 0.6 },
+      {
+        opacity: 0,
+      },
+      0
+    )
+    .to(video04, { opacity: 0.6 });
 
   gsap.to("#scene03", {
     scrollTrigger: {
@@ -166,7 +176,16 @@ $(document).ready(function () {
     end: "center center",
     scrub: 1,
   });
-  sect04tl.to(video05, { opacity: 0.6 });
+  sect04tl
+    .fromTo(
+      video04,
+      { opacity: 0.6 },
+      {
+        opacity: 0,
+      },
+      0
+    )
+    .to(video05, { opacity: 0.6 });
 
   gsap.to("#scene04", {
     scrollTrigger: {
@@ -181,6 +200,51 @@ $(document).ready(function () {
         video05.currentTime = 0.05;
         video05.pause();
       },
+    },
+  });
+
+  gsap.to(".fix-box-5", {
+    x: -(sect05_total - innerWidth),
+    scrollTrigger: {
+      trigger: ".trigger-box-5",
+      start: "top top",
+      end: "bottom bottom",
+      pin: true,
+      pinSpacing: false,
+      scrub: true,
+    },
+  });
+
+  const sect05tl = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sect05tl,
+    trigger: "#scene05",
+    start: "center center",
+    end: "center center",
+    scrub: 1,
+  });
+  sect05tl
+    .fromTo(
+      video05,
+      { opacity: 0.6 },
+      {
+        opacity: 0,
+      },
+      0
+    )
+    .to($("#scene06 .page01"), { opacity: 1 });
+
+  gsap.to("#scene06 .page02", {
+    zIndex: 1,
+    position: "relative",
+    top: 0,
+    scrollTrigger: {
+      trigger: "#scene06",
+      start: "+=100vh",
+      end: "+=200vh",
+      // pin: true,
+      pinSpacing: false,
+      scrub: true,
     },
   });
 
