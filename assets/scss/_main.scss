@@ -137,7 +137,7 @@
     @include page01("../images/sect2/jennie.png");
   }
   .page02 {
-    width: 100vw;
+    width: 900px;
     position: relative;
 
     .butterfly1 {
@@ -240,6 +240,7 @@
     }
   }
 }
+
 #scene03 {
   height: 4800px;
   #scene03_video {
@@ -248,9 +249,10 @@
     z-index: 0;
     opacity: 0;
   }
-  // .trigger-box-3 {
-  //   // z-index: 1;
-  // }
+  .trigger-box-3 {
+    position: relative;
+    z-index: 1;
+  }
   .page01 {
     @include page01("../images/sect3/lilyrose.png");
     .deco {
@@ -329,6 +331,119 @@
       top: 0;
       right: -2%;
       transform: translateY(calc(100vh / 2 + -50%));
+    }
+  }
+}
+
+#scene04 {
+  #scene04_video {
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    opacity: 0;
+  }
+  .trigger-box-2 {
+    z-index: 1;
+    position: relative;
+  }
+  .page01 {
+    @include page01("../images/sect4/whitney.png");
+    .deco {
+      right: -123px;
+      width: 221px;
+      height: 124px;
+    }
+  }
+  .page02 {
+    width: 900px;
+    position: relative;
+
+    .emoji1 {
+      position: absolute;
+      top: 40%;
+      left: -1%;
+      width: 253px;
+      height: 273px;
+      background: url(../images/sect2/butterfly3-white.png) no-repeat 0 0 /
+        cover;
+      opacity: 0.8;
+    }
+    .emoji2 {
+      position: absolute;
+      top: 60%;
+      left: -17%;
+      width: 340px;
+      height: 330px;
+      background: url(../images/sect2/butterfly2-white.png) no-repeat 0 0 /
+        cover;
+      opacity: 0.5;
+    }
+  }
+  .page03 {
+    width: 3500px;
+    padding-left: 300px;
+    position: relative;
+    background: $black;
+    // .txt-deco {
+    //   width: 1387px;
+    //   height: 90px;
+    //   background: url(../images/sect4/txt-deco.png) no-repeat 0 0 / cover;
+    // }
+    .whitney-img01 {
+      width: 620px;
+      height: 100vh;
+      background: url(../images/sect4/whitney01.png) no-repeat 70% 0 / cover;
+    }
+    .whitney-img02 {
+      width: 964px;
+      height: 542px;
+      background: url(../images/sect4/whitney02.png) no-repeat 70% 0 / cover;
+      position: absolute;
+      bottom: 70px;
+      left: 780px;
+    }
+    .set {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 800px;
+      position: absolute;
+      top: 10px;
+      left: 1990px;
+      justify-content: start;
+      gap: 20px;
+      padding-top: 100px;
+    }
+    .cont {
+      @include tit-it(24px);
+    }
+    .whitney-img03 {
+      width: 680px;
+      height: 380px;
+      background: url(../video/whitney-trim01.gif) no-repeat 0 0 / cover;
+    }
+    #whitney-img04 {
+      height: 49vw;
+      width: 49vw;
+      // height: 800px;
+      // width: 800px;
+      position: absolute;
+      top: 0;
+      right: -2%;
+      transform: translateY(calc(100vh / 2 + -50%));
+    }
+    .txt-deco {
+      position: absolute;
+      z-index: 2;
+      bottom: 115px;
+      left: 50px;
+      width: 1145px;
+      height: 220px;
+      transform: rotate(2deg);
+      // width: 545px;
+      // height: 180px;
+      // transform: rotate(10deg);
+      background: url(../images/sect4/txt-deco.png) no-repeat 0 0 / cover;
     }
   }
 }

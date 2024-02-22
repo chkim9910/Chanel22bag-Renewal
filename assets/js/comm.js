@@ -21,16 +21,21 @@ $(document).ready(function () {
 
   let section02Count = $("#scene02 .fix-box-2 .page");
   let sect02_total = 0;
+  let section03Count = $("#scene03 .fix-box-3 .page");
+  let sect03_total = 0;
+  let section04Count = $("#scene04 .fix-box-4 .page");
+  let sect04_total = 0;
 
   for (let i = 0; i < section02Count.length; i++) {
     sect02_total += $("#scene02 .fix-box-2 .page").eq(i).width();
   }
 
-  let section03Count = $("#scene03 .fix-box-3 .page");
-  let sect03_total = 0;
-
   for (let i = 0; i < section03Count.length; i++) {
     sect03_total += $("#scene03 .fix-box-3 .page").eq(i).width();
+  }
+
+  for (let i = 0; i < section04Count.length; i++) {
+    sect04_total += $("#scene04 .fix-box-4 .page").eq(i).width();
   }
 
   gsap.to(".fix-box-2", {
@@ -47,6 +52,8 @@ $(document).ready(function () {
 
   const video02 = document.querySelector("#scene02_video");
   const video03 = document.querySelector("#scene03_video");
+  const video04 = document.querySelector("#scene04_video");
+
   gsap.to("#scene02", {
     scrollTrigger: {
       trigger: "#scene02",
@@ -102,6 +109,44 @@ $(document).ready(function () {
     x: -(sect03_total - innerWidth),
     scrollTrigger: {
       trigger: ".trigger-box-3",
+      start: "top top",
+      end: "bottom bottom",
+      pin: true,
+      pinSpacing: false,
+      scrub: true,
+    },
+  });
+
+  const sect03tl = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sect03tl,
+    trigger: "#scene03",
+    start: "center center",
+    end: "center center",
+    scrub: 1,
+  });
+  sect03tl.to(video04, { opacity: 0.6 });
+
+  gsap.to("#scene03", {
+    scrollTrigger: {
+      trigger: "#scene03",
+      start: "bottom center",
+      end: "+=100%",
+      scrub: true,
+      onEnter: () => {
+        video04.play();
+      },
+      onLeaveBack: () => {
+        video04.currentTime = 0.05;
+        video04.pause();
+      },
+    },
+  });
+
+  gsap.to(".fix-box-4", {
+    x: -(sect04_total - innerWidth),
+    scrollTrigger: {
+      trigger: ".trigger-box-4",
       start: "top top",
       end: "bottom bottom",
       pin: true,
