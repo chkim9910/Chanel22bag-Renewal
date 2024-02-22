@@ -342,7 +342,7 @@
     z-index: 0;
     opacity: 0;
   }
-  .trigger-box-2 {
+  .trigger-box-4 {
     z-index: 1;
     position: relative;
   }
@@ -445,6 +445,26 @@
       // height: 180px;
       // transform: rotate(10deg);
       background: url(../images/sect4/txt-deco.png) no-repeat 0 0 / cover;
+    }
+  }
+}
+
+#scene05 {
+  #scene05_video {
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    opacity: 0;
+  }
+  .trigger-box-5 {
+    z-index: 1;
+    position: relative;
+  }
+  .page01 {
+    @include page01("../images/sect5/margaret.png");
+    .deco {
+      right: -139px;
+      width: 256px;
     }
   }
 }

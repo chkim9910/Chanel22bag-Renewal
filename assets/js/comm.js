@@ -25,6 +25,8 @@ $(document).ready(function () {
   let sect03_total = 0;
   let section04Count = $("#scene04 .fix-box-4 .page");
   let sect04_total = 0;
+  let section05Count = $("#scene05 .fix-box-5 .page");
+  let sect05_total = 0;
 
   for (let i = 0; i < section02Count.length; i++) {
     sect02_total += $("#scene02 .fix-box-2 .page").eq(i).width();
@@ -153,6 +155,32 @@ $(document).ready(function () {
       pin: true,
       pinSpacing: false,
       scrub: true,
+    },
+  });
+
+  const sect04tl = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sect04tl,
+    trigger: "#scene04",
+    start: "center center",
+    end: "center center",
+    scrub: 1,
+  });
+  sect04tl.to(video05, { opacity: 0.6 });
+
+  gsap.to("#scene04", {
+    scrollTrigger: {
+      trigger: "#scene04",
+      start: "bottom center",
+      end: "+=100%",
+      scrub: true,
+      onEnter: () => {
+        video05.play();
+      },
+      onLeaveBack: () => {
+        video05.currentTime = 0.05;
+        video05.pause();
+      },
     },
   });
 

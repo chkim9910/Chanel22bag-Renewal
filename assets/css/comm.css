@@ -770,7 +770,7 @@ legend {
   z-index: 0;
   opacity: 0;
 }
-#scene04 .trigger-box-2 {
+#scene04 .trigger-box-4 {
   z-index: 1;
   position: relative;
 }
@@ -891,4 +891,51 @@ legend {
   height: 220px;
   transform: rotate(2deg);
   background: url(../images/sect4/txt-deco.png) no-repeat 0 0/cover;
+}
+
+#scene05 #scene05_video {
+  position: fixed;
+  top: 0;
+  z-index: 0;
+  opacity: 0;
+}
+#scene05 .trigger-box-5 {
+  z-index: 1;
+  position: relative;
+}
+#scene05 .page01 {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+#scene05 .page01 .inner {
+  display: flex;
+  gap: 145px;
+  align-items: center;
+}
+#scene05 .page01 .title {
+  position: relative;
+}
+#scene05 .page01 .tit {
+  font-family: "couture-it";
+  font-size: 65px;
+  color: #fff;
+}
+#scene05 .page01 .deco {
+  position: absolute;
+  top: 24%;
+  right: -110px;
+  width: 192px;
+  height: 122px;
+  background: url("../images/sect5/margaret.png") no-repeat 0 0/cover;
+}
+#scene05 .page01 .cont {
+  font-family: "Pretendard-thin";
+  font-size: 18px;
+  line-height: 150%;
+  color: #fff;
+}
+#scene05 .page01 .deco {
+  right: -139px;
+  width: 256px;
 }/*# sourceMappingURL=comm.css.map */
