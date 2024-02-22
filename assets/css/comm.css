@@ -1033,7 +1033,7 @@ legend {
 }
 
 #scene06 {
-  height: 300vh;
+  height: 350vh;
 }
 #scene06 .page01 {
   height: 100vh;
@@ -1062,9 +1062,132 @@ legend {
   background: url(../images/sect6/bag-mintv2.png) no-repeat 0 0/cover;
 }
 #scene06 .page02 {
-  height: 200vh;
+  height: 300vh;
   position: fixed;
   z-index: 0;
   top: 100vh;
   background: #f8f8f8;
+}
+#scene06 .page02 .sect1 {
+  height: 626px;
+  display: flex;
+  background: #f1f1f1;
+}
+#scene06 .page02 .sect1 .inner {
+  display: flex;
+}
+#scene06 .page02 .sect1 .bag03 {
+  width: 600px;
+  height: 560px;
+  margin-top: 80px;
+  background: url(../images/sect6/bag-flowerv2.png) no-repeat 70% 0/cover;
+}
+#scene06 .page02 .sect2 {
+  height: 626px;
+  display: flex;
+}
+#scene06 .page02 .sect2 .inner {
+  display: flex;
+}
+#scene06 .page02 .sect2 .bag04 {
+  width: 530px;
+  height: 560px;
+  margin-top: 80px;
+  background: url(../images/sect6/bag-brownv2.png) no-repeat 70% 0/cover;
+}
+#scene06 .page02 .sect3 {
+  height: 726px;
+  display: flex;
+  background: #f1f1f1;
+}
+#scene06 .page02 .sect3 .inner {
+  display: flex;
+  position: relative;
+}
+#scene06 .page02 .sect3 .bag05 {
+  width: 560px;
+  height: 630px;
+  margin-top: 80px;
+  background: url(../images/sect6/bag-babypinkv2.png) no-repeat 50% 0/cover;
+}
+#scene06 .page02 .sect3 .btn-see-more {
+  display: block;
+  width: 260px;
+  height: 260px;
+  background: url(../images/sect6/see-more-v2.png) no-repeat 50% 50%/cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+    transform-origin: center center;
+  }
+}
+#scene06 .page02 .sect4 {
+  height: 626px;
+  margin-top: 100px;
+  display: flex;
+}
+#scene06 .page02 .sect4 .inner {
+  display: flex;
+}
+#scene06 .page02 .sect4 .boutique-illust {
+  width: 482px;
+  height: 518px;
+  background: url(../images/comm/boutique.png) no-repeat 50% 50%/cover;
+}
+#scene06 .page02 .sect4 .cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#scene06 .page02 .sect4 .tit {
+  font-size: 35px;
+}
+#scene06 .page02 .sect4 .btn {
+  display: flex;
+  justify-content: start;
+  gap: 40px;
+  text-align: center;
+  margin-top: 35px;
+}
+#scene06 .page02 .sect4 .btn-find-a-boutique,
+#scene06 .page02 .sect4 .btn-book-an-appointment {
+  font-family: "Pretendard-light";
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  display: block;
+  width: 220px;
+  height: 40px;
+  background: #000;
+  line-height: 40px;
+}
+#scene06 .page02 .sect4 .btn-find-a-boutique:hover,
+#scene06 .page02 .sect4 .btn-book-an-appointment:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+#scene06 .page02 .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#scene06 .page02 .tit {
+  font-family: "couture";
+  font-size: 42px;
+  color: #fff;
+  color: #000;
+  margin-bottom: 15px;
+}
+#scene06 .page02 .desc {
+  width: 526px;
+  word-break: keep-all;
+  font-family: "Pretendard-light";
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  color: #000;
 }/*# sourceMappingURL=comm.css.map */

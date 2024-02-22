@@ -242,7 +242,7 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: "#scene06",
       start: "+=100vh",
-      end: "+=1000%",
+      end: "+=1500%",
       scrub: true,
     },
   });
