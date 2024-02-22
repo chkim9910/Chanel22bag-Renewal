@@ -99,14 +99,14 @@ $(document).ready(function () {
     scrub: 1,
   });
   sect02tl
-    .fromTo(
+    /* .fromTo(
       video02,
       { opacity: 0.6 },
       {
         opacity: 0,
       },
       0
-    )
+    ) */
     .to(video03, { opacity: 0.8 });
 
   gsap.to(".fix-box-3", {
@@ -130,14 +130,14 @@ $(document).ready(function () {
     scrub: 1,
   });
   sect03tl
-    .fromTo(
+    /* .fromTo(
       video03,
       { opacity: 0.6 },
       {
         opacity: 0,
       },
       0
-    )
+    ) */
     .to(video04, { opacity: 0.6 });
 
   gsap.to("#scene03", {
@@ -177,14 +177,14 @@ $(document).ready(function () {
     scrub: 1,
   });
   sect04tl
-    .fromTo(
+    /* .fromTo(
       video04,
       { opacity: 0.6 },
       {
         opacity: 0,
       },
       0
-    )
+    ) */
     .to(video05, { opacity: 0.6 });
 
   gsap.to("#scene04", {
@@ -224,26 +224,25 @@ $(document).ready(function () {
     scrub: 1,
   });
   sect05tl
-    .fromTo(
+    /* .fromTo(
       video05,
       { opacity: 0.6 },
       {
         opacity: 0,
       },
       0
-    )
+    ) */
     .to($("#scene06 .page01"), { opacity: 1 });
 
   gsap.to("#scene06 .page02", {
     zIndex: 1,
     position: "relative",
     top: 0,
+    // duration: 10,
     scrollTrigger: {
       trigger: "#scene06",
       start: "+=100vh",
-      end: "+=200vh",
-      // pin: true,
-      pinSpacing: false,
+      end: "+=1000%",
       scrub: true,
     },
   });
