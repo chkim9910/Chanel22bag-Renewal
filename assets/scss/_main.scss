@@ -1,9 +1,9 @@
 #intro {
   position: fixed;
   // 주석 풀기
-  z-index: 1000;
-  width: 1920px;
-  height: 100vh;
+  // z-index: 1000;
+  // width: 1920px;
+  // height: 100vh;
   overflow: hidden;
   top: 0 !important;
   background: $black;
@@ -134,31 +134,7 @@
     z-index: 1;
   }
   .page01 {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    .inner {
-      display: flex;
-      gap: 145px;
-      align-items: center;
-    }
-    .title {
-      position: relative;
-    }
-    .tit {
-      @include tit-it(65px);
-    }
-    .deco {
-      position: absolute;
-      top: 24%;
-      right: -110px;
-      width: 192px;
-      height: 122px;
-      background: url(../images//sect2/jennie.png) no-repeat 0 0 / cover;
-    }
-    .cont {
-      @include cont-thin(18px);
-    }
+    @include page01("../images/sect2/jennie.png");
   }
   .page02 {
     width: 100vw;
@@ -234,18 +210,11 @@
     }
     .cont {
       @include tit-it(24px);
-      // position: absolute;
-      // top: 320px;
-      // top: 33%;
-      // right: 25%;
     }
     .jennie-img03 {
       width: 680px;
       height: 380px;
       background: url(../video/JENNIE-trim02.gif) no-repeat 0 0 / cover;
-      // position: absolute;
-      // bottom: 100px;
-      // left: 0;
     }
     #jennie-img03 {
       height: 49vw;
@@ -272,10 +241,94 @@
   }
 }
 #scene03 {
+  height: 4800px;
   #scene03_video {
     position: fixed;
     top: 0;
     z-index: 0;
     opacity: 0;
+  }
+  // .trigger-box-3 {
+  //   // z-index: 1;
+  // }
+  .page01 {
+    @include page01("../images/sect3/lilyrose.png");
+    .deco {
+      right: -139px;
+      width: 240px;
+    }
+  }
+  .page01-2 {
+    width: 900px;
+  }
+  .page02 {
+    width: 100vw;
+    position: relative;
+    background: url(../images/sect3/lilyrose02.png) no-repeat 0 0 / cover;
+    .rose1 {
+      position: absolute;
+      top: 40%;
+      left: -22%;
+      width: 303px;
+      height: 292px;
+      background: url(../images/sect3/channel-flower-white@4x.png) no-repeat 0 0 /
+        cover;
+      opacity: 0.8;
+    }
+    .rose2 {
+      position: absolute;
+      top: 66%;
+      left: -6%;
+      width: 283px;
+      height: 273px;
+      background: url(../images/sect3/channel-flower-white@4x.png) no-repeat 0 0 /
+        cover;
+      transform: rotate(43deg) scale(0.8);
+      opacity: 0.8;
+    }
+    .lily-img01 {
+      position: absolute;
+      top: 100px;
+      // top: 50%;
+      // transform: translateY(-50%);
+      left: 84%;
+      z-index: 1;
+      width: 800px;
+      height: 500px;
+      background: url(../images/sect3/lilyrose01.png) no-repeat 0 0 / cover;
+    }
+  }
+  .page03 {
+    width: 2300px;
+    position: relative;
+    background: $black;
+    .set {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 800px;
+      position: absolute;
+      top: 10px;
+      left: 800px;
+      justify-content: end;
+      gap: 20px;
+      padding-bottom: 100px;
+    }
+    .cont {
+      @include tit-it(24px);
+    }
+    .lily-img02 {
+      width: 680px;
+      height: 380px;
+      background: url(../video/lily-trim01.gif) no-repeat 0 0 / cover;
+    }
+    #lily-img03 {
+      height: 49vw;
+      width: 49vw;
+      position: absolute;
+      top: 0;
+      right: -2%;
+      transform: translateY(calc(100vh / 2 + -50%));
+    }
   }
 }

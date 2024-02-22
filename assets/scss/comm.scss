@@ -43,17 +43,26 @@
   }
 }
 
-#scene02 {
+#scene02,
+#scene03,
+#scene04,
+#scene05 {
   width: 100vw;
   position: relative;
   height: 1000vh;
   background: $black;
 
-  .trigger-box-2 {
+  .trigger-box-2,
+  .trigger-box-3,
+  .trigger-box-4,
+  .trigger-box-5 {
     height: 100%;
     width: 100%;
   }
-  .fix-box-2 {
+  .fix-box-2,
+  .fix-box-3,
+  .fix-box-4,
+  .fix-box-5 {
     height: 100vh;
     display: flex;
   }

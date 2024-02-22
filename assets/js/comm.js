@@ -4,20 +4,20 @@ $(document).ready(function () {
   window.onload = function () {
     window.scrollTo(0, 0);
     // 주석 풀기
-    $("body").css("overflow", "hidden");
+    // $("body").css("overflow", "hidden");
   };
   // intro
   // 주석 풀기
-  $("#intro .btn-icon").on("click", function () {
-    var a = document.getElementById("intro_video_inner");
-    a.pause();
-    $("#intro_video_inner ").fadeOut(1000);
-    var tl = gsap.timeline();
-    tl.to([$("#intro")], { height: 0, duration: 1 }, 1.5)
-      .to($("#header"), { top: "0px" })
-      .to($("body"), { overflow: "visible" });
-    window.scrollTo(0, 0);
-  });
+  // $("#intro .btn-icon").on("click", function () {
+  //   var a = document.getElementById("intro_video_inner");
+  //   a.pause();
+  //   $("#intro_video_inner ").fadeOut(1000);
+  //   var tl = gsap.timeline();
+  //   tl.to([$("#intro")], { height: 0, duration: 1 }, 1.5)
+  //     .to($("#header"), { top: "0px" })
+  //     .to($("body"), { overflow: "visible" });
+  //   window.scrollTo(0, 0);
+  // });
 
   let section02Count = $("#scene02 .fix-box-2 .page");
   let sect02_total = 0;
@@ -82,7 +82,7 @@ $(document).ready(function () {
   const sect02tl = gsap.timeline();
   ScrollTrigger.create({
     animation: sect02tl,
-    trigger: "#section02",
+    trigger: "#scene02",
     start: "center center",
     end: "center center",
     scrub: 1,
@@ -97,6 +97,18 @@ $(document).ready(function () {
       0
     )
     .to(video03, { opacity: 0.8 });
+
+  gsap.to(".fix-box-3", {
+    x: -(sect03_total - innerWidth),
+    scrollTrigger: {
+      trigger: ".trigger-box-3",
+      start: "top top",
+      end: "bottom bottom",
+      pin: true,
+      pinSpacing: false,
+      scrub: true,
+    },
+  });
 
   // gsap.to(".fix-box-2", {
   //   x: -(sect02_total - innerWidth),
