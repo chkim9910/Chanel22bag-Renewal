@@ -146,7 +146,7 @@
       position: relative;
     }
     .tit {
-      @include tit-it(60px);
+      @include tit-it(65px);
     }
     .deco {
       position: absolute;
@@ -157,7 +157,7 @@
       background: url(../images//sect2/jennie.png) no-repeat 0 0 / cover;
     }
     .cont {
-      @include cont-thin(20px);
+      @include cont-thin(18px);
     }
   }
   .page02 {
@@ -186,7 +186,8 @@
     }
   }
   .page03 {
-    width: 240vw;
+    width: 3500px;
+    // width: 240vw;
     position: relative;
     background: $black;
     .old-house {
@@ -234,11 +235,14 @@
       right: 28%;
     }
     #jennie-img03 {
-      height: 800px;
-      width: 800px;
+      height: 49vw;
+      width: 49vw;
+      // height: 800px;
+      // width: 800px;
       position: absolute;
       top: 0;
       right: -2%;
+      transform: translateY(calc(100vh / 2 + -50%));
     }
     .txt-deco {
       width: 545px;

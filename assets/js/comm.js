@@ -13,7 +13,7 @@ $(document).ready(function () {
     a.pause();
     $("#intro_video_inner ").fadeOut(1000);
     var tl = gsap.timeline();
-    tl.to([$("#intro")], { height: 0, duration: 1 }, 2)
+    tl.to([$("#intro")], { height: 0, duration: 1 }, 1.5)
       .to($("#header"), { top: "0px" })
       .to($("body"), { overflow: "visible" });
     window.scrollTo(0, 0);
@@ -23,14 +23,14 @@ $(document).ready(function () {
   let sect02_total = 0;
 
   for (let i = 0; i < section02Count.length; i++) {
-    sect02_total += $(".fix-box-2 .page").eq(i).width();
+    sect02_total += $("#scene02 .fix-box-2 .page").eq(i).width();
   }
 
   let section03Count = $("#scene03 .fix-box-3 .page");
   let sect03_total = 0;
 
   for (let i = 0; i < section03Count.length; i++) {
-    sect03_total += $(".fix-box-3 .page").eq(i).width();
+    sect03_total += $("#scene03 .fix-box-3 .page").eq(i).width();
   }
 
   gsap.to(".fix-box-2", {
