@@ -24,23 +24,36 @@ $(document).ready(function () {
   });
 
   // gnb
+  // gsap.set($("#header #gnb"), { autoAlpha: 0 });
+  gsap.set($("#header #gnb"), { opacity: 0 });
   $("#header .menu").click(function () {
-    if ($("#header #gnb").css("top") === "0px") {
+    // if gnb closed
+    if ($("#header #gnb").css("opacity") === "0") {
       const gnbtl = gsap.timeline();
-      gnbtl.to($("#header #gnb"), { top: "-100%" }).to(
-        $("#header .menu").css({
-          transform: "scaleX(1) translateY(100%)",
-          transition: "all 0.3s",
-        })
-      );
-    } else {
+      gnbtl
+        // .to($("#header #gnb .background"), { height: "110%" })
+        // .to($("#header #gnb"), { top: "-100%" })
+        .to($("#header #gnb"), { opacity: 1 })
+        .to($("#header .menu"), {
+          scaleX: 1,
+          transform: "translateY(100%)",
+          duration: 0.3,
+        });
+      // .to($("#header #gnb .background"), { height: "-110%" });
+    }
+    // if gnb opend
+    else {
       const gnbtl2 = gsap.timeline();
-      gnbtl2.to($("#header #gnb"), { top: 0 }).to(
-        $("#header .menu").css({
-          transform: "scaleX(-1) translateY(100%)",
-          transition: "all 0.3s",
-        })
-      );
+      gnbtl2
+        // .to($("#header #gnb .layer"), { height: "110%" })
+        // .to($("#header #gnb"), { top: 0 })
+        .to($("#header #gnb"), { opacity: 0 })
+        .to($("#header .menu"), {
+          scaleX: -1,
+          transform: "translateY(100%)",
+          duration: 0.3,
+        });
+      // .to($("#header #gnb .background"), { height: "110%" });
     }
   });
 
