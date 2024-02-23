@@ -19,6 +19,26 @@ $(document).ready(function () {
   //   window.scrollTo(0, 0);
   // });
 
+  // gnb
+  $("#header .menu").click(function () {
+    if ($("#header #gnb").css("top") === "0px") {
+      gsap.to($("#header #gnb"), { top: "-100%" }).to(
+        $("#header .menu").css({
+          transform: "scaleX(1) translateY(100%)",
+          // "transform-origin": "center center",
+        })
+      );
+    } else {
+      gsap.to($("#header #gnb"), { top: 0 }).to(
+        $("#header .menu").css({
+          transform: "scaleX(-1) translateY(100%)",
+          // "transform-origin": "center center",
+        })
+      );
+    }
+  });
+
+  // scene
   let section02Count = $("#scene02 .fix-box-2 .page");
   let sect02_total = 0;
   let section03Count = $("#scene03 .fix-box-3 .page");

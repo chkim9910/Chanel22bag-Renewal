@@ -16,16 +16,23 @@
 }
 #header {
   position: fixed;
-  top: -100px;
+  // 주석풀기
+  // top: -100px;
+  // top:0 지우기
+  top: 0;
   left: 0;
   right: 0;
   height: 100px;
   z-index: 100;
-  display: flex;
-  justify-content: end;
   margin: 0 4.16vw;
   padding: 20px 0;
-
+  .wrap {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    justify-content: end;
+    background: transparent;
+  }
   // position: relative;
   #logo {
     width: 100%;
@@ -40,6 +47,47 @@
     transform: translateY(100%);
     background: url(../images/comm/menu-bar@4x.png) no-repeat 50% 50% / cover;
     cursor: pointer;
+  }
+
+  #gnb {
+    position: fixed;
+    height: 100vh;
+    top: -100%;
+    // bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: url(../images/comm/릴리로즈.png) no-repeat 50% 50% / cover;
+    .inner {
+      display: flex;
+      align-items: center;
+    }
+    .menu-li-item {
+      line-height: 500%;
+      width: fit-content;
+      a {
+        @include tit(90px);
+        transition: all 0.5s;
+        &:after {
+          content: "";
+          display: block;
+          height: 8px;
+          width: 100%;
+          position: relative;
+          top: -20px;
+          background-color: #7cf8e8;
+          transform: scaleX(0%);
+          transition: all 0.5s;
+          transform-origin: left;
+        }
+        &:hover {
+          color: #7cf8e8;
+          &:after {
+            transform: scaleX(100%);
+          }
+        }
+      }
+    }
   }
 }
 
