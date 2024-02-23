@@ -19,7 +19,12 @@ $(document).ready(function () {
     var tl = gsap.timeline();
     tl.to([$("#intro")], { height: 0, duration: 1 }, 1.5)
       .to($("#header"), { top: "0px" })
-      .to($("body"), { overflow: "visible" });
+      .to($("body"), { overflow: "visible" })
+      .fromTo(
+        $(".poster1"),
+        { x: -100, autoAlpha: 0 },
+        { x: 0, autoAlpha: 1, duration: 0.4 }
+      );
     window.scrollTo(0, 0);
   });
 
