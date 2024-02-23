@@ -226,16 +226,7 @@ $(document).ready(function () {
     end: "center center",
     scrub: 1,
   });
-  sect05tl
-    /* .fromTo(
-      video05,
-      { opacity: 0.6 },
-      {
-        opacity: 0,
-      },
-      0
-    ) */
-    .to($("#scene06 .page01"), { opacity: 1 });
+  sect05tl.to($("#scene06 .page01"), { opacity: 1 });
 
   gsap.to("#scene06 .page02", {
     zIndex: 1,
@@ -245,10 +236,20 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: "#scene06",
       start: "+=100vh",
-      end: "+=1500%",
+      end: "+=1000%",
       scrub: true,
     },
   });
+
+  // const sect06tl = gsap.timeline();
+  // ScrollTrigger.create({
+  //   animation: sect06tl,
+  //   trigger: "#scene06",
+  //   start: "center center",
+  //   end: "center center",
+  //   scrub: 1,
+  // });
+  // sect04tl.to($("#scene06 .page01"), {  });
 
   // gsap.to(".fix-box-2", {
   //   x: -(sect02_total - innerWidth),

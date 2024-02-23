@@ -510,7 +510,7 @@
     }
   }
   .page03 {
-    width: 3500px;
+    width: 2500px;
     position: relative;
     background: $black;
     .set {
@@ -533,21 +533,6 @@
       height: 380px;
       background: url(../video/margaret-trim01.gif) no-repeat 0 0 / cover;
     }
-    .margaret-img04 {
-      width: 980px;
-      height: 564px;
-      margin-left: 1780px;
-      background: url(../images/sect5/bg.jpg) no-repeat 0 0 / cover;
-      opacity: 0.6;
-    }
-    .margaret-img05 {
-      width: 651px;
-      height: 420px;
-      position: absolute;
-      left: 1840px;
-      bottom: 110px;
-      background: url(../images/sect5/margaret03.png) no-repeat 0 0 / cover;
-    }
     #margaret-img06 {
       height: 49vw;
       width: 49vw;
@@ -560,7 +545,7 @@
 }
 
 #scene06 {
-  height: 400vh;
+  height: 3200px;
   // position: fixed;
   .page01 {
     height: 100vh;
@@ -591,7 +576,7 @@
     }
   }
   .page02 {
-    height: 300vh;
+    height: 400vh;
     position: fixed;
     z-index: 0;
     top: 100vh;
@@ -726,5 +711,63 @@
       @include cont(16px);
       color: $black;
     }
+  }
+}
+
+#footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 465px;
+  background: $black;
+  .inner {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+  .upper {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+  }
+  .logo {
+    padding-top: 60px;
+    @include tit(40px);
+    text-align: center;
+  }
+
+  .left-box {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    @include cont(20px);
+  }
+  .right-box {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    @include cont(20px);
+    display: flex;
+    justify-content: end;
+  }
+  .left-item,
+  .right-item {
+    margin-top: 12px;
+    a {
+      &:hover {
+        color: #7cf8e8;
+      }
+    }
+  }
+  .bottom {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    @include cont(14px);
+    color: rgb(255, 255, 255, 0.7);
+    margin-top: 20px;
+  }
+  #locationLanguage {
+    background: black;
+    border: none;
+    color: white;
   }
 }

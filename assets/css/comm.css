@@ -153,7 +153,7 @@ body {
 }
 /* color값은 디자인가이드에 맞게사용 */
 a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
 }
 a:active, a:hover {
@@ -982,7 +982,7 @@ legend {
   opacity: 0.8;
 }
 #scene05 .page03 {
-  width: 3500px;
+  width: 2500px;
   position: relative;
   background: #000;
 }
@@ -1008,21 +1008,6 @@ legend {
   height: 380px;
   background: url(../video/margaret-trim01.gif) no-repeat 0 0/cover;
 }
-#scene05 .page03 .margaret-img04 {
-  width: 980px;
-  height: 564px;
-  margin-left: 1780px;
-  background: url(../images/sect5/bg.jpg) no-repeat 0 0/cover;
-  opacity: 0.6;
-}
-#scene05 .page03 .margaret-img05 {
-  width: 651px;
-  height: 420px;
-  position: absolute;
-  left: 1840px;
-  bottom: 110px;
-  background: url(../images/sect5/margaret03.png) no-repeat 0 0/cover;
-}
 #scene05 .page03 #margaret-img06 {
   height: 49vw;
   width: 49vw;
@@ -1033,7 +1018,7 @@ legend {
 }
 
 #scene06 {
-  height: 400vh;
+  height: 3200px;
 }
 #scene06 .page01 {
   height: 100vh;
@@ -1063,7 +1048,7 @@ legend {
   background: url(../images/sect6/bag-mintv2.png) no-repeat 0 0/cover;
 }
 #scene06 .page02 {
-  height: 300vh;
+  height: 400vh;
   position: fixed;
   z-index: 0;
   top: 100vh;
@@ -1201,4 +1186,71 @@ legend {
   line-height: 150%;
   color: #fff;
   color: #000;
+}
+
+#footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 465px;
+  background: #000;
+}
+#footer .inner {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+#footer .upper {
+  grid-column: 1/span 2;
+  grid-row: 1/span 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+#footer .logo {
+  padding-top: 60px;
+  font-family: "couture";
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+}
+#footer .left-box {
+  grid-column: 1/span 1;
+  grid-row: 2/span 1;
+  font-family: "Pretendard-light";
+  font-size: 20px;
+  line-height: 150%;
+  color: #fff;
+}
+#footer .right-box {
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
+  font-family: "Pretendard-light";
+  font-size: 20px;
+  line-height: 150%;
+  color: #fff;
+  display: flex;
+  justify-content: end;
+}
+#footer .left-item,
+#footer .right-item {
+  margin-top: 12px;
+}
+#footer .left-item a:hover,
+#footer .right-item a:hover {
+  color: #7cf8e8;
+}
+#footer .bottom {
+  grid-column: 1/span 1;
+  grid-row: 3/span 1;
+  font-family: "Pretendard-light";
+  font-size: 14px;
+  line-height: 150%;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 20px;
+}
+#footer #locationLanguage {
+  background: black;
+  border: none;
+  color: white;
 }/*# sourceMappingURL=comm.css.map */
