@@ -372,7 +372,7 @@ legend {
 }
 #header #gnb .menu-li-item a {
   font-family: "couture";
-  font-size: 90px;
+  font-size: 4.687vw;
   color: #fff;
   transition: all 0.5s;
 }
@@ -1109,7 +1109,7 @@ legend {
 }
 
 #scene06 {
-  height: 3200px;
+  height: 3100px;
 }
 #scene06 .page01 {
   height: 100vh;
@@ -1284,6 +1284,7 @@ legend {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 50;
   height: 465px;
   background: #000;
 }

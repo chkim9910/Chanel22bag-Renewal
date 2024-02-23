@@ -91,7 +91,7 @@
       line-height: 500%;
       width: fit-content;
       a {
-        @include tit(90px);
+        @include tit(4.687vw);
         transition: all 0.5s;
         &:after {
           content: "";

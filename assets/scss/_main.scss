@@ -560,7 +560,8 @@
 }
 
 #scene06 {
-  height: 3200px;
+  height: 3100px;
+  // height: 3200px;
   // position: fixed;
   .page01 {
     height: 100vh;
@@ -734,6 +735,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 50;
   height: 465px;
   background: $black;
   .inner {

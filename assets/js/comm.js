@@ -22,8 +22,17 @@ $(document).ready(function () {
       .to($("body"), { overflow: "visible" })
       .fromTo(
         $(".poster1"),
+        1.5,
         { x: -100, autoAlpha: 0 },
-        { x: 0, autoAlpha: 1, duration: 0.4 }
+        { x: 0, autoAlpha: 1, duration: 0.4 },
+        2
+      )
+      .fromTo(
+        $("#scene01 .content1"),
+        1.5,
+        { x: 100, autoAlpha: 0 },
+        { x: 0, autoAlpha: 1, duration: 0.4 },
+        4
       );
     window.scrollTo(0, 0);
   });
@@ -193,7 +202,7 @@ $(document).ready(function () {
       { x: 100, yPercent: 84 },
       -1.5
     )
-    .fromTo($("#scene03 .set"), { y: 500, x: -500 }, { y: -200, x: 0 }, -1.5)
+    .fromTo($("#scene03 .set"), { y: 500, x: -500 }, { y: -100, x: 0 }, -1.5)
     .fromTo($("#lily-img03"), { opacity: 0 }, { opacity: 1 });
 
   const sect03tl = gsap.timeline();
@@ -340,7 +349,8 @@ $(document).ready(function () {
   ScrollTrigger.create({
     animation: sect06page01tl,
     trigger: "#scene05",
-    start: "+=9000px",
+    start: "+=100%",
+    // start: "+=9000px",
     end: "+=2000px",
     scrub: 1,
   });
@@ -377,10 +387,10 @@ $(document).ready(function () {
         $(".sect3 .title"),
         /* $(".sect4 .inner"), */
       ],
-      0.7,
+      0.4,
       { y: 100, autoAlpha: 0 },
       { y: 0, autoAlpha: 1, stagger: 0.4 },
-      -2
+      -2.5
     )
     .fromTo(
       $(".sect4 .cont"),
