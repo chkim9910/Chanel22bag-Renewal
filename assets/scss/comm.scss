@@ -16,10 +16,7 @@
 }
 #header {
   position: fixed;
-  // 주석풀기
-  // top: -100px;
-  // top:0 지우기
-  top: 0;
+  top: -100px;
   left: 0;
   right: 0;
   height: 100px;
@@ -53,14 +50,40 @@
     position: fixed;
     height: 100vh;
     top: -100%;
-    // bottom: 0;
     left: 0;
     right: 0;
     z-index: 50;
-    background: url(../images/comm/릴리로즈.png) no-repeat 50% 50% / cover;
+
+    #scene {
+      width: 100vw;
+      height: 100vh;
+    }
+    .layer {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .background {
+      position: absolute;
+      width: 110%;
+      height: 110%;
+      left: -5%;
+      top: -5%;
+      background: url(../images/comm/릴리로즈.png) no-repeat 50% 50% / cover;
+    }
+
     .inner {
-      display: flex;
-      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      z-index: 110;
+    }
+    .menu-li {
+      position: absolute;
+      top: 0;
+      z-index: 1000;
+      transform: translateY(-50%);
     }
     .menu-li-item {
       line-height: 500%;

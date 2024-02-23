@@ -1,44 +1,44 @@
 $(document).ready(function () {
-  AOS.init({
-    offset: 120, // offset (in px) from the original trigger point
-    delay: 0, // values from 0 to 3000, with step 50ms
-    duration: 1000, // values from 0 to 3000, with step 50ms
-    easing: "ease", // default easing for AOS animations
-  });
+  AOS.init();
   gsap.registerPlugin(ScrollTrigger);
+  var scene = document.getElementById("scene");
+  var parallaxInstance = new Parallax(scene);
+
   // 페이지가 로드될 때 스크롤을 맨 위로 이동
   window.onload = function () {
     window.scrollTo(0, 0);
     // 주석 풀기
-    // $("body").css("overflow", "hidden");
+    $("body").css("overflow", "hidden");
   };
   // intro
   // 주석 풀기
-  // $("#intro .btn-icon").on("click", function () {
-  //   var a = document.getElementById("intro_video_inner");
-  //   a.pause();
-  //   $("#intro_video_inner ").fadeOut(1000);
-  //   var tl = gsap.timeline();
-  //   tl.to([$("#intro")], { height: 0, duration: 1 }, 1.5)
-  //     .to($("#header"), { top: "0px" })
-  //     .to($("body"), { overflow: "visible" });
-  //   window.scrollTo(0, 0);
-  // });
+  $("#intro .btn-icon").on("click", function () {
+    var a = document.getElementById("intro_video_inner");
+    a.pause();
+    $("#intro_video_inner ").fadeOut(1000);
+    var tl = gsap.timeline();
+    tl.to([$("#intro")], { height: 0, duration: 1 }, 1.5)
+      .to($("#header"), { top: "0px" })
+      .to($("body"), { overflow: "visible" });
+    window.scrollTo(0, 0);
+  });
 
   // gnb
   $("#header .menu").click(function () {
     if ($("#header #gnb").css("top") === "0px") {
-      gsap.to($("#header #gnb"), { top: "-100%" }).to(
+      const gnbtl = gsap.timeline();
+      gnbtl.to($("#header #gnb"), { top: "-100%" }).to(
         $("#header .menu").css({
           transform: "scaleX(1) translateY(100%)",
-          // "transform-origin": "center center",
+          transition: "all 0.3s",
         })
       );
     } else {
-      gsap.to($("#header #gnb"), { top: 0 }).to(
+      const gnbtl2 = gsap.timeline();
+      gnbtl2.to($("#header #gnb"), { top: 0 }).to(
         $("#header .menu").css({
           transform: "scaleX(-1) translateY(100%)",
-          // "transform-origin": "center center",
+          transition: "all 0.3s",
         })
       );
     }
@@ -83,6 +83,19 @@ $(document).ready(function () {
   const video03 = document.querySelector("#scene03_video");
   const video04 = document.querySelector("#scene04_video");
   const video05 = document.querySelector("#scene05_video");
+
+  const sect02page03tl = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sect02page03tl,
+    trigger: "#scene02",
+    start: "1500px top",
+    end: "bottom bottom",
+    scrub: 1,
+  });
+  sect02page03tl
+    .fromTo($(".jennie-img02"), { y: -500, x: 800 }, { y: 0, x: 0 }, -1.5)
+    .fromTo($("#scene02 .set"), { y: 500, x: -500 }, { y: 0, x: 0 }, -1.3)
+    .fromTo($("#jennie-img03"), { opacity: 0 }, { opacity: 1 });
 
   gsap.to("#scene02", {
     scrollTrigger: {
@@ -147,6 +160,24 @@ $(document).ready(function () {
     },
   });
 
+  const sect03page02tl = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sect03page02tl,
+    trigger: "#scene03",
+    start: "1500px top",
+    end: "bottom bottom",
+    scrub: 1,
+  });
+  sect03page02tl
+    .fromTo(
+      $(".lily-img01"),
+      { x: 0, yPercent: -100 },
+      { x: 100, yPercent: 84 },
+      -1.5
+    )
+    .fromTo($("#scene03 .set"), { y: 500, x: -500 }, { y: -200, x: 0 }, -1.5)
+    .fromTo($("#lily-img03"), { opacity: 0 }, { opacity: 1 });
+
   const sect03tl = gsap.timeline();
   ScrollTrigger.create({
     animation: sect03tl,
@@ -193,6 +224,20 @@ $(document).ready(function () {
       scrub: 1,
     },
   });
+
+  const sect04page03tl = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sect04page03tl,
+    trigger: "#scene04",
+    start: "00px top",
+    end: "bottom bottom",
+    scrub: 1,
+  });
+  sect04page03tl
+    .fromTo($(".whitney-img01"), 0.5, { yPercent: -100 }, { yPercent: 0 }, -1)
+    .fromTo($(".whitney-img02"), { scale: 0 }, { scale: 1 }, -1)
+    .fromTo($("#scene04 .set"), { y: 500, x: -300 }, { y: 0, x: 0 })
+    .fromTo($("#whitney-img04"), { opacity: 0 }, { opacity: 1 });
 
   const sect04tl = gsap.timeline();
   ScrollTrigger.create({
@@ -244,6 +289,25 @@ $(document).ready(function () {
     },
   });
 
+  const sect05page03tl = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sect05page03tl,
+    trigger: "#scene05",
+    start: "1500px top",
+    end: "bottom bottom",
+    scrub: 1,
+  });
+  sect05page03tl
+    .fromTo(
+      $(".margaret-img02"),
+      0.5,
+      { yPercent: 100, scale: 0 },
+      { yPercent: 0, scale: 1 },
+      -1
+    )
+    .fromTo($("#scene05 .set"), { y: 500, x: -300 }, { y: 100, x: -50 }, -0.7)
+    .fromTo($("#margaret-img06"), { opacity: 0 }, { opacity: 1 });
+
   const sect05tl = gsap.timeline();
   ScrollTrigger.create({
     animation: sect05tl,
@@ -253,6 +317,18 @@ $(document).ready(function () {
     scrub: 1,
   });
   sect05tl.to($("#scene06 .page01"), { opacity: 1 });
+
+  const sect06page01tl = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sect06page01tl,
+    trigger: "#scene05",
+    start: "+=9000px",
+    end: "+=2000px",
+    scrub: 1,
+  });
+  sect06page01tl
+    .fromTo($("#scene06 .bag01"), 0.2, { x: -300 }, { x: 0 }, -1.5)
+    .fromTo($("#scene06 .bag02"), 0.2, { x: 300 }, { x: 0 }, -1.5);
 
   gsap.to("#scene06 .page02", {
     zIndex: 1,
@@ -267,98 +343,31 @@ $(document).ready(function () {
     },
   });
 
-  // const sect06tl = gsap.timeline();
-  // ScrollTrigger.create({
-  //   animation: sect06tl,
-  //   trigger: "#scene06",
-  //   start: "center center",
-  //   end: "center center",
-  //   scrub: 1,
-  // });
-  // sect04tl.to($("#scene06 .page01"), {  });
-
-  // gsap.to(".fix-box-2", {
-  //   x: -(sect02_total - innerWidth),
-  //   scrollTrigger: {
-  //     trigger: ".trigger-box-2",
-  //     start: "top top",
-  //     end: "bottom bottom",
-  //     pin: true,
-  //     pinSpacing: false,
-  //     scrub: true,
-  //   },
-  //   // onPin: () => {
-  //   //   console.log(".fix-box-2가 pin 되었습니다.");
-  //   // },
-  //   // onUnpin: () => {
-  //   //   console.log(".fix-box-2가 pin 되지 않았습니다.");
-  //   // },
-  //   // onStart: () => {
-  //   //   console.log("sect02에 들어왔습니다.");
-  //   // },
-  // });
-
-  // gsap.to("#scene02 .page01", {
-  //   scrollTrigger: {
-  //     trigger: "#scene02 .page01",
-  //     start: "top top",
-  //     end: "+=2000",
-  //     pin: true,
-  //     scrub: true,
-  //     // toggleClass: "on",
-  //   },
-  // });
-
-  // gsap.to("#scene02 .page02", {
-  //   scrollTrigger: {
-  //     trigger: "#scene02",
-  //     start: "300 top",
-  //     end: "bottom bottom",
-  //     scrub: true,
-  //     onEnter: () => {
-  //       $("#scene02 .page02").addClass("on");
-  //     },
-  //     onEnterBack: () => {
-  //       $("#scene02 .page02").addClass("on");
-  //     },
-  //     onLeave: () => {
-  //       $("#scene02 .page02").removeClass("on");
-  //     },
-  //     onLeaveBack: () => {
-  //       $("#scene02 .page02").removeClass("on");
-  //     },
-  //   },
-  // });
-
-  // gsap.to("#scene02 .page03 .txt", {
-  //   y: -innerHeight * 2,
-  //   scrollTrigger: {
-  //     trigger: "#scene02",
-  //     // start: "top top",
-  //     start: () => "+=" + innerHeight * 1.5,
-  //     end: "bottom bottom",
-  //     scrub: true,
-  //   },
-  // });
-
-  // gsap.to("#scene02 .page04", {
-  //   scrollTrigger: {
-  //     trigger: "#scene02",
-  //     start: "3000 top",
-  //     end: "bottom bottom",
-  //     scrub: true,
-  //     onEnter: () => {
-  //       $("#scene02 .page04").addClass("on");
-  //     },
-  //     onEnterBack: () => {
-  //       $("#scene02 .page04").addClass("on");
-  //     },
-  //     onLeave: () => {
-  //       $("#scene02 .page04").removeClass("on");
-  //     },
-  //     onLeaveBack: () => {
-  //       $("#scene02 .page04").removeClass("on");
-  //     },
-  //   },
-  // });
+  const sect06page02tl = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sect06page02tl,
+    trigger: "#scene06",
+    start: "+=500px",
+    end: "+=2000px",
+    scrub: 1,
+  });
+  sect06page02tl
+    .fromTo(
+      [
+        $(".sect1 .title"),
+        $(".sect2 .title"),
+        $(".sect3 .title"),
+        /* $(".sect4 .inner"), */
+      ],
+      0.7,
+      { y: 100, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1, stagger: 0.4 },
+      -2
+    )
+    .fromTo(
+      $(".sect4 .cont"),
+      { x: 100, autoAlpha: 0 },
+      { x: 0, autoAlpha: 1 },
+      -0.8
+    );
 });

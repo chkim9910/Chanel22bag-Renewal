@@ -1,9 +1,9 @@
 #intro {
   position: fixed;
   // 주석 풀기
-  // z-index: 1000;
-  // width: 1920px;
-  // height: 100vh;
+  z-index: 1000;
+  width: 1920px;
+  height: 100vh;
   overflow: hidden;
   top: 0 !important;
   background: $black;
@@ -279,6 +279,7 @@
       background: url(../images/sect3/channel-flower-white@4x.png) no-repeat 0 0 /
         cover;
       opacity: 0.8;
+      animation: roseRotate 5s linear infinite;
     }
     .rose2 {
       position: absolute;
@@ -290,6 +291,17 @@
         cover;
       transform: rotate(43deg) scale(0.8);
       opacity: 0.8;
+      animation: roseRotate2 7s linear infinite;
+    }
+    @keyframes roseRotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes roseRotate2 {
+      to {
+        transform: rotate(-360deg) scale(0.8);
+      }
     }
     .lily-img01 {
       position: absolute;
@@ -513,7 +525,7 @@
     }
   }
   .page03 {
-    width: 2500px;
+    width: 2100px;
     position: relative;
     background: $black;
     .set {
@@ -523,7 +535,7 @@
       width: 800px;
       position: absolute;
       top: 10px;
-      left: 700px;
+      left: 640px;
       justify-content: start;
       gap: 20px;
       padding-top: 100px;

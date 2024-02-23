@@ -297,7 +297,7 @@ legend {
 
 #header {
   position: fixed;
-  top: 0;
+  top: -100px;
   left: 0;
   right: 0;
   height: 100px;
@@ -333,11 +333,36 @@ legend {
   left: 0;
   right: 0;
   z-index: 50;
+}
+#header #gnb #scene {
+  width: 100vw;
+  height: 100vh;
+}
+#header #gnb .layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#header #gnb .background {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  left: -5%;
+  top: -5%;
   background: url(../images/comm/릴리로즈.png) no-repeat 50% 50%/cover;
 }
 #header #gnb .inner {
-  display: flex;
-  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 110;
+}
+#header #gnb .menu-li {
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  transform: translateY(-50%);
 }
 #header #gnb .menu-li-item {
   line-height: 500%;
@@ -428,6 +453,9 @@ legend {
 
 #intro {
   position: fixed;
+  z-index: 1000;
+  width: 1920px;
+  height: 100vh;
   overflow: hidden;
   top: 0 !important;
   background: #000;
@@ -574,7 +602,7 @@ legend {
 }
 #scene02 .page01 .inner {
   display: flex;
-  gap: 145px;
+  gap: 175px;
   align-items: center;
 }
 #scene02 .page01 .title {
@@ -713,7 +741,7 @@ legend {
 }
 #scene03 .page01 .inner {
   display: flex;
-  gap: 145px;
+  gap: 175px;
   align-items: center;
 }
 #scene03 .page01 .title {
@@ -758,6 +786,7 @@ legend {
   height: 292px;
   background: url(../images/sect3/channel-flower-white@4x.png) no-repeat 0 0/cover;
   opacity: 0.8;
+  animation: roseRotate 5s linear infinite;
 }
 #scene03 .page02 .rose2 {
   position: absolute;
@@ -768,6 +797,17 @@ legend {
   background: url(../images/sect3/channel-flower-white@4x.png) no-repeat 0 0/cover;
   transform: rotate(43deg) scale(0.8);
   opacity: 0.8;
+  animation: roseRotate2 7s linear infinite;
+}
+@keyframes roseRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes roseRotate2 {
+  to {
+    transform: rotate(-360deg) scale(0.8);
+  }
 }
 #scene03 .page02 .lily-img01 {
   position: absolute;
@@ -831,7 +871,7 @@ legend {
 }
 #scene04 .page01 .inner {
   display: flex;
-  gap: 145px;
+  gap: 175px;
   align-items: center;
 }
 #scene04 .page01 .title {
@@ -960,7 +1000,7 @@ legend {
 }
 #scene05 .page01 .inner {
   display: flex;
-  gap: 145px;
+  gap: 175px;
   align-items: center;
 }
 #scene05 .page01 .title {
@@ -1032,7 +1072,7 @@ legend {
   opacity: 0.8;
 }
 #scene05 .page03 {
-  width: 2500px;
+  width: 2100px;
   position: relative;
   background: #000;
 }
@@ -1043,7 +1083,7 @@ legend {
   width: 800px;
   position: absolute;
   top: 10px;
-  left: 700px;
+  left: 640px;
   justify-content: start;
   gap: 20px;
   padding-top: 100px;
