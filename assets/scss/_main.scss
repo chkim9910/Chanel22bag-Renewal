@@ -62,10 +62,13 @@
 #scene01 {
   position: relative;
   height: 250vh;
+  background-attachment: fixed;
   background: url(../images/sect1/buildings-with-lights-landscape-high-angle.jpg)
     no-repeat 50% 50% / 200%;
   z-index: 10;
 
+  perspective: 1000px;
+  transform: translateZ(-2px);
   &:after {
     display: block;
     content: "";
