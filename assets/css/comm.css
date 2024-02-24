@@ -284,23 +284,24 @@ legend {
   content: "";
 }
 
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(124, 248, 232);
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #28d1bb;
+}
+body::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0);
+}
+
 #scrollBox {
   height: 100%;
   position: relative;
-}
-#scrollBox::-webkit-scrollbar {
-  width: 10px;
-}
-#scrollBox::-webkit-scrollbar-thumb {
-  background-color: #2f3542;
-  border-radius: 10px;
-  background-clip: padding-box;
-  border: 2px solid transparent;
-}
-#scrollBox::-webkit-scrollbar-track {
-  background-color: grey;
-  border-radius: 10px;
-  box-shadow: inset 0px 0px 5px white;
 }
 
 .wrap {

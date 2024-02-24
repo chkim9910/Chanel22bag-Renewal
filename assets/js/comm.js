@@ -20,6 +20,7 @@ $(document).ready(function () {
     var tl = gsap.timeline();
     tl.to([$("#intro")], { height: 0, duration: 1 }, 1.5)
       .to($("#header"), { top: "0px" })
+      .to($("body"), { overflow: "visible" })
       .fromTo(
         $(".poster1"),
         1.5,
@@ -45,33 +46,29 @@ $(document).ready(function () {
     if ($("#header #gnb").css("display") === "none") {
       const gnbtl = gsap.timeline();
       gnbtl
-        // .to($("#header #gnb .background"), { height: "110%" })
-        // .to($("#header #gnb"), { top: "-100%" })
         .to($("#header #gnb"), { display: "block" })
         .to($("#header #gnb"), { opacity: 1, zIndex: 50 })
+        .to($("body"), { overflow: "hidden" })
         .to($("#header #gnb .inner"), { zIndex: 60 })
         .to($("#header .menu"), {
-          scaleX: 1,
+          scaleX: -1,
           transform: "translateY(100%)",
           duration: 0.3,
         });
-
-      // .to($("#header #gnb .background"), { height: "-110%" });
     }
     // if gnb opend
     else {
       const gnbtl2 = gsap.timeline();
       gnbtl2
-        // .to($("#header #gnb .layer"), { height: "110%" })
-        // .to($("#header #gnb"), { top: 0 })
         .to($("#header #gnb"), { opacity: 0, zIndex: 0 })
         .to($("#header #gnb .inner"), { zIndex: 0 })
         .to($("#header .menu"), {
-          scaleX: -1,
+          scaleX: 1,
           transform: "translateY(100%)",
           duration: 0.3,
         })
-        .to($("#header #gnb"), { display: "none" });
+        .to($("#header #gnb"), { display: "none" })
+        .to($("body"), { overflow: "visible" });
       // .to($("#header #gnb .background"), { height: "110%" });
     }
   });
