@@ -1,6 +1,7 @@
 $(document).ready(function () {
   AOS.init();
   gsap.registerPlugin(ScrollTrigger);
+  Splitting();
   var scene = document.getElementById("scene");
   var parallaxInstance = new Parallax(scene);
 
@@ -384,4 +385,54 @@ $(document).ready(function () {
     .to($("#scene06 .page01"), { zIndex: -1 });
   // .to($("#scene06 .page02"), { yPercent: -100 })
   // .to($("#footer"), { zIndex: 0 });
+});
+
+const cursor = document.getElementById("cursor");
+const links = document.getElementsByTagName("a");
+const buttons = document.getElementsByTagName("button");
+
+for (button of buttons) {
+  button.addEventListener("mouseover", function (event) {
+    cursor.classList.add("active");
+  });
+  button.addEventListener("mousemove", function (event) {
+    cursor.classList.add("active");
+  });
+  button.addEventListener("mouseout", function (event) {
+    cursor.classList.remove("active");
+  });
+}
+
+for (link of links) {
+  link.addEventListener("mouseover", function (event) {
+    cursor.classList.add("active");
+  });
+  link.addEventListener("mousemove", function (event) {
+    cursor.classList.add("active");
+  });
+  link.addEventListener("mouseout", function (event) {
+    cursor.classList.remove("active");
+  });
+}
+
+gsap.set("#cursor", { xPercent: -50, yPercent: -50 });
+const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+const mouse = { x: pos.x, y: pos.y };
+const speed = 0.35;
+
+const xSet = gsap.quickSetter(cursor, "x", "px");
+const ySet = gsap.quickSetter(cursor, "y", "px");
+
+window.addEventListener("mousemove", (e) => {
+  mouse.x = e.x;
+  mouse.y = e.y;
+});
+
+gsap.ticker.add(() => {
+  const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+
+  pos.x += (mouse.x - pos.x) * dt;
+  pos.y += (mouse.y - pos.y) * dt;
+  xSet(pos.x);
+  ySet(pos.y);
 });
