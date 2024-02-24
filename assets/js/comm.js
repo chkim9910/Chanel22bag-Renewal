@@ -1,7 +1,7 @@
 $(document).ready(function () {
   AOS.init();
   gsap.registerPlugin(ScrollTrigger);
-  Splitting();
+
   var scene = document.getElementById("scene");
   var parallaxInstance = new Parallax(scene);
 
@@ -20,7 +20,6 @@ $(document).ready(function () {
     var tl = gsap.timeline();
     tl.to([$("#intro")], { height: 0, duration: 1 }, 1.5)
       .to($("#header"), { top: "0px" })
-      .to($("body"), { overflow: "visible" })
       .fromTo(
         $(".poster1"),
         1.5,
