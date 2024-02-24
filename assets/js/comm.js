@@ -42,17 +42,20 @@ $(document).ready(function () {
   gsap.set($("#header #gnb"), { opacity: 0 });
   $("#header .menu").click(function () {
     // if gnb closed
-    if ($("#header #gnb").css("opacity") === "0") {
+    if ($("#header #gnb").css("display") === "none") {
       const gnbtl = gsap.timeline();
       gnbtl
         // .to($("#header #gnb .background"), { height: "110%" })
         // .to($("#header #gnb"), { top: "-100%" })
-        .to($("#header #gnb"), { opacity: 1 })
+        .to($("#header #gnb"), { display: "block" })
+        .to($("#header #gnb"), { opacity: 1, zIndex: 50 })
+        .to($("#header #gnb .inner"), { zIndex: 60 })
         .to($("#header .menu"), {
           scaleX: 1,
           transform: "translateY(100%)",
           duration: 0.3,
         });
+
       // .to($("#header #gnb .background"), { height: "-110%" });
     }
     // if gnb opend
@@ -61,12 +64,14 @@ $(document).ready(function () {
       gnbtl2
         // .to($("#header #gnb .layer"), { height: "110%" })
         // .to($("#header #gnb"), { top: 0 })
-        .to($("#header #gnb"), { opacity: 0 })
+        .to($("#header #gnb"), { opacity: 0, zIndex: 0 })
+        .to($("#header #gnb .inner"), { zIndex: 0 })
         .to($("#header .menu"), {
           scaleX: -1,
           transform: "translateY(100%)",
           duration: 0.3,
-        });
+        })
+        .to($("#header #gnb"), { display: "none" });
       // .to($("#header #gnb .background"), { height: "110%" });
     }
   });
@@ -94,6 +99,7 @@ $(document).ready(function () {
     sect05_total += $("#scene05 .fix-box-5 .page").eq(i).width();
   }
 
+  // scene2
   gsap.to(".fix-box-2", {
     x: -(sect02_total - innerWidth),
     scrollTrigger: {
@@ -102,7 +108,7 @@ $(document).ready(function () {
       end: "bottom bottom",
       pin: true,
       pinSpacing: false,
-      scrub: 2,
+      scrub: 3,
     },
   });
 
@@ -117,7 +123,7 @@ $(document).ready(function () {
     trigger: "#scene02",
     start: "1500px top",
     end: "bottom bottom",
-    scrub: 1,
+    scrub: 2,
   });
   sect02page03tl
     .fromTo($(".jennie-img02"), { y: -500, x: 800 }, { y: 0, x: 0 }, -1.5)
@@ -164,17 +170,9 @@ $(document).ready(function () {
     end: "center center",
     scrub: 1,
   });
-  sect02tl
-    /* .fromTo(
-      video02,
-      { opacity: 0.6 },
-      {
-        opacity: 0,
-      },
-      0
-    ) */
-    .to(video03, { opacity: 0.8 });
+  sect02tl.to(video02, { zIndex: -1 }).to(video03, { opacity: 0.8 });
 
+  // scene3
   gsap.to(".fix-box-3", {
     x: -(sect03_total - innerWidth),
     scrollTrigger: {
@@ -213,16 +211,7 @@ $(document).ready(function () {
     end: "center center",
     scrub: 1,
   });
-  sect03tl
-    /* .fromTo(
-      video03,
-      { opacity: 0.6 },
-      {
-        opacity: 0,
-      },
-      0
-    ) */
-    .to(video04, { opacity: 0.6 });
+  sect03tl.to(video03, { zIndex: -1 }).to(video04, { opacity: 0.6 });
 
   gsap.to("#scene03", {
     scrollTrigger: {
@@ -240,6 +229,7 @@ $(document).ready(function () {
     },
   });
 
+  // scene4
   gsap.to(".fix-box-4", {
     x: -(sect04_total - innerWidth),
     scrollTrigger: {
@@ -248,7 +238,7 @@ $(document).ready(function () {
       end: "bottom bottom",
       pin: true,
       pinSpacing: false,
-      scrub: 1,
+      scrub: 3,
     },
   });
 
@@ -274,16 +264,7 @@ $(document).ready(function () {
     end: "center center",
     scrub: 1,
   });
-  sect04tl
-    /* .fromTo(
-      video04,
-      { opacity: 0.6 },
-      {
-        opacity: 0,
-      },
-      0
-    ) */
-    .to(video05, { opacity: 0.6 });
+  sect04tl.to(video04, { zIndex: -1 }).to(video05, { opacity: 0.6 });
 
   gsap.to("#scene04", {
     scrollTrigger: {
@@ -301,6 +282,7 @@ $(document).ready(function () {
     },
   });
 
+  // scene5
   gsap.to(".fix-box-5", {
     x: -(sect05_total - innerWidth),
     scrollTrigger: {
@@ -309,10 +291,10 @@ $(document).ready(function () {
       end: "bottom bottom",
       pin: true,
       pinSpacing: false,
-      scrub: 2,
+      scrub: 3,
     },
     onComplete: () => {
-      $(".trigger-box-5").css("display", "none");
+      $(".trigger-box-5").css("z-index", "-1");
     },
   });
 
@@ -343,8 +325,12 @@ $(document).ready(function () {
     end: "center center",
     scrub: 1,
   });
-  sect05tl.to($("#scene06 .page01"), { opacity: 1 });
 
+  sect05tl
+    .to(video05, { zIndex: -1 })
+    .to($("#scene06 .page01"), { opacity: 1 });
+
+  // scene6
   const sect06page01tl = gsap.timeline();
   ScrollTrigger.create({
     animation: sect06page01tl,
@@ -356,7 +342,8 @@ $(document).ready(function () {
   });
   sect06page01tl
     .fromTo($("#scene06 .bag01"), 0.2, { x: -300 }, { x: 0 }, -1.5)
-    .fromTo($("#scene06 .bag02"), 0.2, { x: 300 }, { x: 0 }, -1.5);
+    .fromTo($("#scene06 .bag02"), 0.2, { x: 300 }, { x: 0 }, -1.5)
+    .fromTo($("#footer"), { zIndex: -1 }, { zIndex: 0 });
 
   gsap.to("#scene06 .page02", {
     zIndex: 1,
@@ -381,21 +368,20 @@ $(document).ready(function () {
   });
   sect06page02tl
     .fromTo(
-      [
-        $(".sect1 .title"),
-        $(".sect2 .title"),
-        $(".sect3 .title"),
-        /* $(".sect4 .inner"), */
-      ],
-      0.4,
+      [$(".sect1 .title"), $(".sect2 .title"), $(".sect3 .title")],
+      0.5,
       { y: 100, autoAlpha: 0 },
-      { y: 0, autoAlpha: 1, stagger: 0.4 },
-      -2.5
+      { y: 0, autoAlpha: 1, stagger: 1.2 },
+      -2
     )
     .fromTo(
       $(".sect4 .cont"),
       { x: 100, autoAlpha: 0 },
       { x: 0, autoAlpha: 1 },
-      -0.8
-    );
+      2
+    )
+    .to($("#scene05 .trigger-box-5"), { display: "none" })
+    .to($("#scene06 .page01"), { zIndex: -1 });
+  // .to($("#scene06 .page02"), { yPercent: -100 })
+  // .to($("#footer"), { zIndex: 0 });
 });

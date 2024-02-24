@@ -327,6 +327,7 @@ legend {
   cursor: pointer;
 }
 #header #gnb {
+  display: none;
   opacity: 0;
   position: fixed;
   height: 100vh;
@@ -357,7 +358,7 @@ legend {
   top: 50%;
   left: 0;
   right: 0;
-  z-index: 110;
+  z-index: 60;
 }
 #header #gnb .menu-li {
   position: absolute;
@@ -651,7 +652,7 @@ legend {
   opacity: 0.5;
 }
 #scene02 .page03 {
-  width: 3500px;
+  width: 3000px;
   position: relative;
   background: #000;
 }
@@ -689,7 +690,7 @@ legend {
   width: 800px;
   position: absolute;
   top: 10px;
-  left: 1990px;
+  left: 1780px;
   justify-content: end;
   gap: 20px;
   padding-bottom: 100px;
@@ -925,7 +926,7 @@ legend {
   opacity: 0.5;
 }
 #scene04 .page03 {
-  width: 3800px;
+  width: 3600px;
   padding-left: 300px;
   position: relative;
   background: #000;
@@ -1073,7 +1074,7 @@ legend {
   opacity: 0.8;
 }
 #scene05 .page03 {
-  width: 2100px;
+  width: 1900px;
   position: relative;
   background: #000;
 }
@@ -1084,7 +1085,7 @@ legend {
   width: 800px;
   position: absolute;
   top: 10px;
-  left: 640px;
+  left: 540px;
   justify-content: start;
   gap: 20px;
   padding-top: 100px;
@@ -1109,7 +1110,7 @@ legend {
 }
 
 #scene06 {
-  height: 3100px;
+  height: 3179px;
 }
 #scene06 .page01 {
   height: 100vh;
@@ -1139,9 +1140,9 @@ legend {
   background: url(../images/sect6/bag-mintv2.png) no-repeat 0 0/cover;
 }
 #scene06 .page02 {
-  height: 400vh;
+  height: 2704px;
   position: fixed;
-  z-index: 0;
+  z-index: 1;
   top: 100vh;
   background: #f8f8f8;
 }
@@ -1281,17 +1282,19 @@ legend {
 
 #footer {
   position: relative;
-  bottom: 0;
+  padding-top: 40px;
+  top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
-  height: 465px;
+  z-index: -1;
+  height: 680px;
   background: #000;
 }
 #footer .inner {
   display: grid;
   grid-template-columns: auto auto;
   gap: 10px;
+  height: 426px;
 }
 #footer .upper {
   grid-column: 1/span 2;
@@ -1299,11 +1302,11 @@ legend {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 #footer .logo {
-  padding-top: 60px;
   font-family: "couture";
   font-size: 40px;
   color: #fff;
   text-align: center;
+  padding-bottom: 40px;
 }
 #footer .left-box {
   grid-column: 1/span 1;
@@ -1312,6 +1315,7 @@ legend {
   font-size: 20px;
   line-height: 150%;
   color: #fff;
+  padding-top: 50px;
 }
 #footer .right-box {
   grid-column: 2/span 1;
@@ -1322,6 +1326,7 @@ legend {
   color: #fff;
   display: flex;
   justify-content: end;
+  padding-top: 50px;
 }
 #footer .left-item,
 #footer .right-item {
@@ -1339,7 +1344,7 @@ legend {
   line-height: 150%;
   color: #fff;
   color: rgba(255, 255, 255, 0.7);
-  margin-top: 20px;
+  margin-top: 80px;
 }
 #footer #locationLanguage {
   background: black;

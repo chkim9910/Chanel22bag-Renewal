@@ -47,6 +47,7 @@
   }
 
   #gnb {
+    display: none;
     opacity: 0;
     position: fixed;
     height: 100vh;
@@ -79,7 +80,7 @@
       top: 50%;
       left: 0;
       right: 0;
-      z-index: 110;
+      z-index: 60;
     }
     .menu-li {
       position: absolute;
