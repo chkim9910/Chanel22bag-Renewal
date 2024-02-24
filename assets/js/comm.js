@@ -248,8 +248,8 @@ $(document).ready(function () {
     scrub: 1,
   });
   sect04page03tl
-    .fromTo($(".whitney-img01"), 0.5, { yPercent: -100 }, { yPercent: 0 }, -1)
-    .fromTo($(".whitney-img02"), { scale: 0 }, { scale: 1 }, -1)
+    .fromTo($(".whitney-img01"), { yPercent: -100 }, { yPercent: 0 }, 0.5)
+    .fromTo($(".whitney-img02"), { scale: 0 }, { scale: 1 })
     .fromTo($("#scene04 .set"), { y: 500, x: -300 }, { y: 0, x: 0 })
     .fromTo($("#whitney-img04"), { opacity: 0 }, { opacity: 1 });
 
