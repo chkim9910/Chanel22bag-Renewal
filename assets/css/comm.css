@@ -11,22 +11,19 @@
 }
 @font-face {
   font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Pretendard-light";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Pretendard-thin";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff") format("woff");
   font-weight: 200;
   font-style: normal;
 }
@@ -82,14 +79,12 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after {
+blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-q:before,
-q:after {
+q:before, q:after {
   content: "";
   content: none;
 }
@@ -119,14 +114,11 @@ body {
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
-input[type="text"],
-input[type="password"],
-input[type="submit"],
-input[type="search"] {
+input[type=text], input[type=password], input[type=submit], input[type=search] {
   -webkit-appearance: none;
   border-radius: 0;
 }
-input:checked[type="checkbox"] {
+input:checked[type=checkbox] {
   background-color: #666;
   -webkit-appearance: checkbox;
 }
@@ -136,14 +128,11 @@ button {
   border-radius: 0;
 }
 
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-input[type="file"] {
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
   -webkit-appearance: button;
   border-radius: 0;
 }
-input[type="search"]::-webkit-search-cancel-button {
+input[type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
@@ -152,8 +141,7 @@ input[type="search"]::-webkit-search-cancel-button {
 body {
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Noto Sans KR", sans-serif, "Malgun Gothic", "맑은 고딕",
-    sans-serif;
+  font-family: "Noto Sans KR", sans-serif, "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #202020;
   cursor: none;
 }
@@ -169,8 +157,7 @@ a {
   color: #fff;
   text-decoration: none;
 }
-a:active,
-a:hover {
+a:active, a:hover {
   text-decoration: none;
 }
 
@@ -189,7 +176,7 @@ hr {
   display: none;
 }
 
-input[type="password"] {
+input[type=password] {
   font-family: "Malgun Gothic";
 }
 
@@ -359,7 +346,7 @@ body::-webkit-scrollbar-track {
   width: 70px;
   height: 10px;
   transform: translateY(100%);
-  background: url(../images/comm/menu-bar@4x.png) no-repeat 50% 50% / cover;
+  background: url(../images/comm/menu-bar@4x.png) no-repeat 50% 50%/cover;
   cursor: pointer;
 }
 #header #gnb {
@@ -387,7 +374,7 @@ body::-webkit-scrollbar-track {
   height: 110%;
   left: -5%;
   top: -5%;
-  background: url(../images/comm/릴리로즈.png) no-repeat 50% 50% / cover;
+  background: url(../images/comm/릴리로즈.png) no-repeat 50% 50%/cover;
 }
 #header #gnb .inner {
   position: absolute;
@@ -503,12 +490,9 @@ body::-webkit-scrollbar-track {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.3s ease-in-out, border-width 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out, background 0.3s ease-in-out,
-    border 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, border-width 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
-#cursor:before,
-#cursor:after {
+#cursor:before, #cursor:after {
   content: "";
   position: absolute;
   width: 10px;
@@ -531,8 +515,7 @@ body::-webkit-scrollbar-track {
   background: #000;
   border: #000;
 }
-#cursor.active:before,
-#cursor.active:after {
+#cursor.active:before, #cursor.active:after {
   transition-delay: 0.6s;
 }
 #cursor.active:before {
@@ -623,8 +606,7 @@ strong.circle:before {
 #intro .btn-icon {
   width: 70px;
   height: 70px;
-  background: url(../images/intro/intro-button-white@4x.png) no-repeat 50% 50% /
-    cover;
+  background: url(../images/intro/intro-button-white@4x.png) no-repeat 50% 50%/cover;
 }
 #intro .btn-desc {
   font-family: "Pretendard-light";
@@ -638,8 +620,7 @@ strong.circle:before {
   position: relative;
   height: 250vh;
   background-attachment: fixed;
-  background: url(../images/sect1/buildings-with-lights-landscape-high-angle.jpg)
-    no-repeat 50% 50%/200%;
+  background: url(../images/sect1/buildings-with-lights-landscape-high-angle.jpg) no-repeat 50% 50%/200%;
   z-index: 10;
   perspective: 1000px;
   transform: translateZ(-2px);
@@ -651,7 +632,7 @@ strong.circle:before {
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   -webkit-backdrop-filter: blur(0.5px);
-  backdrop-filter: blur(0.5px);
+          backdrop-filter: blur(0.5px);
   position: absolute;
   top: 0;
   left: 0;
@@ -689,21 +670,21 @@ strong.circle:before {
 #scene01 .poster1 {
   width: 490px;
   height: 617px;
-  background: url(../images/sect1/휘트니2.png) no-repeat 0 0 / contain;
+  background: url(../images/sect1/휘트니2.png) no-repeat 0 0/contain;
   position: relative;
   z-index: 1;
 }
 #scene01 .poster2 {
   width: 550px;
   height: 690px;
-  background: url(../images/sect1/릴리로즈2.png) no-repeat 0 0 / contain;
+  background: url(../images/sect1/릴리로즈2.png) no-repeat 0 0/contain;
   position: relative;
   z-index: 1;
 }
 #scene01 .highlight {
   width: 480px;
   height: 100px;
-  background: url(../images/sect1/by-white.png) no-repeat -30px 57% / cover;
+  background: url(../images/sect1/by-white.png) no-repeat -30px 57%/cover;
 }
 
 #scene02 #scene02_video {
@@ -739,7 +720,7 @@ strong.circle:before {
   right: -110px;
   width: 192px;
   height: 122px;
-  background: url("../images/sect2/jennie.png") no-repeat 0 0 / cover;
+  background: url("../images/sect2/jennie.png") no-repeat 0 0/cover;
 }
 #scene02 .page01 .cont {
   font-family: "Pretendard-thin";
@@ -757,7 +738,7 @@ strong.circle:before {
   left: -1%;
   width: 253px;
   height: 273px;
-  background: url(../images/sect2/butterfly3-white.png) no-repeat 0 0 / cover;
+  background: url(../images/sect2/butterfly3-white.png) no-repeat 0 0/cover;
   opacity: 0.8;
 }
 #scene02 .page02 .butterfly2 {
@@ -766,7 +747,7 @@ strong.circle:before {
   left: -17%;
   width: 340px;
   height: 330px;
-  background: url(../images/sect2/butterfly2-white.png) no-repeat 0 0 / cover;
+  background: url(../images/sect2/butterfly2-white.png) no-repeat 0 0/cover;
   opacity: 0.5;
 }
 #scene02 .page03 {
@@ -779,13 +760,13 @@ strong.circle:before {
   top: 58%;
   width: 597px;
   height: 420px;
-  background: url(../images/sect2/한옥-white.png) no-repeat 0 0 / cover;
+  background: url(../images/sect2/한옥-white.png) no-repeat 0 0/cover;
   opacity: 0.3;
 }
 #scene02 .page03 .jennie-img02 {
   width: 970px;
   height: 628px;
-  background: url(../images/sect2/제니2.png) no-repeat 0 0 / cover;
+  background: url(../images/sect2/제니2.png) no-repeat 0 0/cover;
   margin-left: 600px;
   position: relative;
 }
@@ -794,7 +775,7 @@ strong.circle:before {
   display: block;
   width: 220px;
   height: 236px;
-  background: url(../images/sect2/butterfly3-white.png) no-repeat 0 0 / cover;
+  background: url(../images/sect2/butterfly3-white.png) no-repeat 0 0/cover;
   opacity: 0.8;
   transform: scaleX(-1);
   position: absolute;
@@ -821,7 +802,7 @@ strong.circle:before {
 #scene02 .page03 .jennie-img03 {
   width: 680px;
   height: 380px;
-  background: url(../video/JENNIE-trim02.gif) no-repeat 0 0 / cover;
+  background: url(../video/JENNIE-trim02.gif) no-repeat 0 0/cover;
 }
 #scene02 .page03 #jennie-img03 {
   height: 49vw;
@@ -838,7 +819,7 @@ strong.circle:before {
   width: 715px;
   height: 220px;
   transform: rotate(8deg);
-  background: url(../images/sect2/yeah.png) no-repeat 0 0 / cover;
+  background: url(../images/sect2/yeah.png) no-repeat 0 0/cover;
 }
 
 #scene03 {
@@ -878,7 +859,7 @@ strong.circle:before {
   right: -110px;
   width: 192px;
   height: 122px;
-  background: url("../images/sect3/lilyrose.png") no-repeat 0 0 / cover;
+  background: url("../images/sect3/lilyrose.png") no-repeat 0 0/cover;
 }
 #scene03 .page01 .cont {
   font-family: "Pretendard-thin";
@@ -896,7 +877,7 @@ strong.circle:before {
 #scene03 .page02 {
   width: 100vw;
   position: relative;
-  background: url(../images/sect3/lilyrose02.png) no-repeat 0 0 / cover;
+  background: url(../images/sect3/lilyrose02.png) no-repeat 0 0/cover;
 }
 #scene03 .page02 .rose1 {
   position: absolute;
@@ -904,8 +885,7 @@ strong.circle:before {
   left: -22%;
   width: 303px;
   height: 292px;
-  background: url(../images/sect3/channel-flower-white@4x.png) no-repeat 0 0 /
-    cover;
+  background: url(../images/sect3/channel-flower-white@4x.png) no-repeat 0 0/cover;
   opacity: 0.8;
   animation: roseRotate 5s linear infinite;
 }
@@ -915,8 +895,7 @@ strong.circle:before {
   left: -6%;
   width: 283px;
   height: 273px;
-  background: url(../images/sect3/channel-flower-white@4x.png) no-repeat 0 0 /
-    cover;
+  background: url(../images/sect3/channel-flower-white@4x.png) no-repeat 0 0/cover;
   transform: rotate(43deg) scale(0.8);
   opacity: 0.8;
   animation: roseRotate2 7s linear infinite;
@@ -938,7 +917,7 @@ strong.circle:before {
   z-index: 1;
   width: 800px;
   height: 500px;
-  background: url(../images/sect3/lilyrose01.png) no-repeat 0 0 / cover;
+  background: url(../images/sect3/lilyrose01.png) no-repeat 0 0/cover;
 }
 #scene03 .page03 {
   width: 2300px;
@@ -965,7 +944,7 @@ strong.circle:before {
 #scene03 .page03 .lily-img02 {
   width: 680px;
   height: 380px;
-  background: url(../video/lily-trim01.gif) no-repeat 0 0 / cover;
+  background: url(../video/lily-trim01.gif) no-repeat 0 0/cover;
 }
 #scene03 .page03 #lily-img03 {
   height: 49vw;
@@ -1010,7 +989,7 @@ strong.circle:before {
   right: -110px;
   width: 192px;
   height: 122px;
-  background: url("../images/sect4/whitney.png") no-repeat 0 0 / cover;
+  background: url("../images/sect4/whitney.png") no-repeat 0 0/cover;
 }
 #scene04 .page01 .cont {
   font-family: "Pretendard-thin";
@@ -1033,7 +1012,7 @@ strong.circle:before {
   left: -1%;
   width: 253px;
   height: 273px;
-  background: url(../images/sect2/butterfly3-white.png) no-repeat 0 0 / cover;
+  background: url(../images/sect2/butterfly3-white.png) no-repeat 0 0/cover;
   opacity: 0.8;
 }
 #scene04 .page02 .emoji2 {
@@ -1042,7 +1021,7 @@ strong.circle:before {
   left: -17%;
   width: 340px;
   height: 330px;
-  background: url(../images/sect2/butterfly2-white.png) no-repeat 0 0 / cover;
+  background: url(../images/sect2/butterfly2-white.png) no-repeat 0 0/cover;
   opacity: 0.5;
 }
 #scene04 .page03 {
@@ -1054,12 +1033,12 @@ strong.circle:before {
 #scene04 .page03 .whitney-img01 {
   width: 620px;
   height: 100vh;
-  background: url(../images/sect4/whitney01.png) no-repeat 70% 0 / cover;
+  background: url(../images/sect4/whitney01.png) no-repeat 70% 0/cover;
 }
 #scene04 .page03 .whitney-img02 {
   width: 964px;
   height: 542px;
-  background: url(../images/sect4/whitney02.png) no-repeat 70% 0 / cover;
+  background: url(../images/sect4/whitney02.png) no-repeat 70% 0/cover;
   position: absolute;
   bottom: 70px;
   left: 780px;
@@ -1084,7 +1063,7 @@ strong.circle:before {
 #scene04 .page03 .whitney-img03 {
   width: 680px;
   height: 380px;
-  background: url(../video/whitney-trim01.gif) no-repeat 0 0 / cover;
+  background: url(../video/whitney-trim01.gif) no-repeat 0 0/cover;
 }
 #scene04 .page03 #whitney-img04 {
   height: 49vw;
@@ -1102,7 +1081,7 @@ strong.circle:before {
   width: 1145px;
   height: 220px;
   transform: rotate(2deg);
-  background: url(../images/sect4/txt-deco.png) no-repeat 0 0 / cover;
+  background: url(../images/sect4/txt-deco.png) no-repeat 0 0/cover;
 }
 
 #scene05 #scene05_video {
@@ -1139,7 +1118,7 @@ strong.circle:before {
   right: -110px;
   width: 192px;
   height: 122px;
-  background: url("../images/sect5/margaret.png") no-repeat 0 0 / cover;
+  background: url("../images/sect5/margaret.png") no-repeat 0 0/cover;
 }
 #scene05 .page01 .cont {
   font-family: "Pretendard-thin";
@@ -1159,12 +1138,12 @@ strong.circle:before {
 }
 #scene05 .page02 .margaret-img01 {
   height: 100vh;
-  background: url(../images/sect5/margaret01.jpg) no-repeat 0 0 / cover;
+  background: url(../images/sect5/margaret01.jpg) no-repeat 0 0/cover;
 }
 #scene05 .page02 .margaret-img02 {
   width: 562px;
   height: 750px;
-  background: url(../images/sect5/margaret02.png) no-repeat 0 0 / cover;
+  background: url(../images/sect5/margaret02.png) no-repeat 0 0/cover;
   position: absolute;
   top: 100px;
   right: -240px;
@@ -1179,7 +1158,7 @@ strong.circle:before {
   bottom: -50px;
   right: 0;
   z-index: 2;
-  background: url(../images/sect5/grass@4x.png) no-repeat 0 0 / cover;
+  background: url(../images/sect5/grass@4x.png) no-repeat 0 0/cover;
 }
 #scene05 .page02 .margaret-img02:after {
   content: "";
@@ -1190,7 +1169,7 @@ strong.circle:before {
   bottom: 80px;
   right: -150px;
   z-index: 2;
-  background: url(../images/sect5/grass@4x.png) no-repeat 0 0 / cover;
+  background: url(../images/sect5/grass@4x.png) no-repeat 0 0/cover;
   opacity: 0.8;
 }
 #scene05 .page03 {
@@ -1218,7 +1197,7 @@ strong.circle:before {
 #scene05 .page03 .margaret-img03 {
   width: 680px;
   height: 380px;
-  background: url(../video/margaret-trim01.gif) no-repeat 0 0 / cover;
+  background: url(../video/margaret-trim01.gif) no-repeat 0 0/cover;
 }
 #scene05 .page03 #margaret-img06 {
   height: 49vw;
@@ -1248,7 +1227,7 @@ strong.circle:before {
   width: 646px;
   height: 844px;
   transform: rotate(-8deg);
-  background: url(../images/sect6/bag-pinkv2.png) no-repeat 0 0 / cover;
+  background: url(../images/sect6/bag-pinkv2.png) no-repeat 0 0/cover;
 }
 #scene06 .page01 .bag02 {
   position: absolute;
@@ -1257,7 +1236,7 @@ strong.circle:before {
   width: 1500px;
   height: 1230px;
   transform: rotate(15deg);
-  background: url(../images/sect6/bag-mintv2.png) no-repeat 0 0 / cover;
+  background: url(../images/sect6/bag-mintv2.png) no-repeat 0 0/cover;
 }
 #scene06 .page02 {
   height: 2704px;
@@ -1277,7 +1256,7 @@ strong.circle:before {
 #scene06 .page02 .sect1 .by {
   width: 522px;
   height: 110px;
-  background: url(../images/sect1/by-black.png) no-repeat 50% 50% / cover;
+  background: url(../images/sect1/by-black.png) no-repeat 50% 50%/cover;
   position: absolute;
   bottom: 180px;
   right: -160px;
@@ -1287,7 +1266,7 @@ strong.circle:before {
   width: 600px;
   height: 560px;
   margin-top: 80px;
-  background: url(../images/sect6/bag-flowerv2.png) no-repeat 70% 0 / cover;
+  background: url(../images/sect6/bag-flowerv2.png) no-repeat 70% 0/cover;
 }
 #scene06 .page02 .sect2 {
   height: 626px;
@@ -1300,7 +1279,7 @@ strong.circle:before {
   width: 530px;
   height: 560px;
   margin-top: 80px;
-  background: url(../images/sect6/bag-brownv2.png) no-repeat 70% 0 / cover;
+  background: url(../images/sect6/bag-brownv2.png) no-repeat 70% 0/cover;
 }
 #scene06 .page02 .sect3 {
   height: 726px;
@@ -1314,13 +1293,13 @@ strong.circle:before {
   width: 560px;
   height: 630px;
   margin-top: 80px;
-  background: url(../images/sect6/bag-babypinkv2.png) no-repeat 50% 0 / cover;
+  background: url(../images/sect6/bag-babypinkv2.png) no-repeat 50% 0/cover;
 }
 #scene06 .page02 .sect3 .btn-see-more {
   display: block;
   width: 260px;
   height: 260px;
-  background: url(../images/sect6/see-more-v2.png) no-repeat 50% 50% / cover;
+  background: url(../images/sect6/see-more-v2.png) no-repeat 50% 50%/cover;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1344,7 +1323,7 @@ strong.circle:before {
 #scene06 .page02 .sect4 .boutique-illust {
   width: 482px;
   height: 518px;
-  background: url(../images/comm/boutique.png) no-repeat 50% 50% / cover;
+  background: url(../images/comm/boutique.png) no-repeat 50% 50%/cover;
 }
 #scene06 .page02 .sect4 .cont {
   display: flex;
@@ -1417,8 +1396,8 @@ strong.circle:before {
   height: 426px;
 }
 #footer .upper {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 1;
+  grid-column: 1/span 2;
+  grid-row: 1/span 1;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 #footer .logo {
@@ -1429,8 +1408,8 @@ strong.circle:before {
   padding-bottom: 40px;
 }
 #footer .left-box {
-  grid-column: 1 / span 1;
-  grid-row: 2 / span 1;
+  grid-column: 1/span 1;
+  grid-row: 2/span 1;
   font-family: "Pretendard-light";
   font-size: 20px;
   line-height: 150%;
@@ -1438,8 +1417,8 @@ strong.circle:before {
   padding-top: 50px;
 }
 #footer .right-box {
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
   font-family: "Pretendard-light";
   font-size: 20px;
   line-height: 150%;
@@ -1457,8 +1436,8 @@ strong.circle:before {
   color: #7cf8e8;
 }
 #footer .bottom {
-  grid-column: 1 / span 1;
-  grid-row: 3 / span 1;
+  grid-column: 1/span 1;
+  grid-row: 3/span 1;
   font-family: "Pretendard-light";
   font-size: 14px;
   line-height: 150%;
@@ -1470,4 +1449,4 @@ strong.circle:before {
   background: black;
   border: none;
   color: white;
-} /*# sourceMappingURL=comm.css.map */
+}/*# sourceMappingURL=comm.css.map */
