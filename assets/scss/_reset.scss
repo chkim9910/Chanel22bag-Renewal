@@ -1,5 +1,4 @@
 /* reset */
-
 body,
 div,
 dl,
@@ -135,6 +134,7 @@ body {
   line-height: 1.5;
   font-family: $font-family, "Malgun Gothic", "맑은 고딕", sans-serif;
   color: $txtDefult;
+  cursor: none;
 }
 
 /* desktop */
@@ -148,7 +148,7 @@ body {
 /* color값은 디자인가이드에 맞게사용 */
 
 a {
-  color: #333;
+  color: $white;
   text-decoration: none;
 
   &:active,
