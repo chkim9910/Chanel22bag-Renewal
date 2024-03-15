@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/comm/favicon-16x16.png"
+    />
     <title>CHANEL 22 BAG</title>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="CHANEL 22 BAG" />
@@ -23,11 +29,18 @@
       content="http://www.mysite.com/article/article1.html"
     />
     <meta name="twitter:domain" content="CHANEL 22 BAG" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/comm.css" />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/default-passive-events"
+    ></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script defer src="./assets/js/comm.js"></script>
   </head>
   <body>
@@ -35,133 +48,550 @@
       <a href="#gnb">주메뉴 바로가기</a>
       <a href="#main">본문 바로가기</a>
     </div>
-    <div class="scrollBox">
+    <div id="intro">
+      <div id="intro_video">
+        <video
+          style="width: 100vw; height: 100vh"
+          autoplay
+          loop
+          muted
+          id="intro_video_inner"
+        >
+          <source src="./assets/video/intro.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="tit">
+        <h2
+          class="txt1"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-sine"
+        >
+          CHANEL22 BAG
+        </h2>
+        <p
+          class="txt2"
+          data-aos="fade-in"
+          data-aos-delay="1000"
+          data-aos-duration="1500"
+          data-aos-easing="ease-in-sine"
+        >
+          The year of its creation, <br />
+          2022 Imagined by Virginie Viard
+        </p>
+      </div>
+      <div
+        class="btn"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="1500"
+        data-aos-easing="ease-in-sine"
+      >
+        <button class="btn-icon"></button>
+        <p class="btn-desc">PRESS AND HOLD TO DISCOVER</p>
+      </div>
+    </div>
+    <div id="scrollBox">
       <div class="wrap">
-        <div id="intro">
-          <div id="intro_video">
+        <header id="header">
+          <div class="wrap">
+            <h1 id="logo">
+              <a href="#">
+                <p class="blind">CHANEL</p>
+                <img
+                  src="./assets/images/comm/chanel-logo@4x.png"
+                  alt="chanel"
+                  width="150px"
+                />
+              </a>
+            </h1>
+            <div class="menu">
+              <div class="blind">전체 메뉴 보기</div>
+            </div>
+          </div>
+          <nav id="gnb">
+            <div
+              id="scene"
+              data-friction-x="0.1"
+              data-friction-y="0.1"
+              data-scalar-x="25"
+              data-scalar-y="15"
+            >
+              <li class="layer" data-depth="0.10">
+                <div class="background"></div>
+              </li>
+            </div>
+            <div class="inner">
+              <ul class="menu-li">
+                <li class="menu-li-item"><a href="#">MAIN</a></li>
+                <li class="menu-li-item"><a href="#">SHOP</a></li>
+                <li class="menu-li-item">
+                  <a href="#">CHANEL OFFICIAL PAGE</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+        <div id="main">
+          <div id="scene01">
+            <div class="inner">
+              <div class="inner1">
+                <div
+                  class="poster1"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                ></div>
+                <div class="content1">
+                  <p class="desc">
+                    In the sagacity of cities, <br />
+                    the plenitude of open spaces or the daydream of a villa,
+                    <br />
+                    CHANEL ambassadors Whitney Peak, Margaret Qualley, <br />
+                    Lily-Rose Depp and JENNIE play the game of autobiographical
+                    fiction.
+                  </p>
+                </div>
+              </div>
+              <div class="inner2">
+                <div
+                  class="content2"
+                  data-aos="fade-left"
+                  data-aos-delay="500"
+                  data-aos-duration="1800"
+                >
+                  <p class="desc">
+                    Like a page of a diary written in an affable, imaginary ink,
+                    <br />
+                    they tell their stories, and ours. <br />
+                    <br />
+                    On their arm, the CHANEL 22 bag, <br />
+                    a genuine ally for daily life captured by Inez Vinoodh
+                    through four films.
+                  </p>
+                  <div class="highlight"></div>
+                </div>
+                <div class="poster2" data-aos="fade-up"></div>
+              </div>
+            </div>
+          </div>
+          <div id="scene02">
             <video
               style="width: 100vw; height: 100vh"
               autoplay
               loop
               muted
-              id="intro_video_inner"
+              id="scene02_video"
             >
-              <source src="./assets/video/intro.mp4" type="video/mp4" />
+              <source src="./assets/video/JENNIE-trim01.mp4" type="video/mp4" />
             </video>
+            <div class="trigger-box-2">
+              <div class="fix-box-2">
+                <div class="page page01">
+                  <div class="inner">
+                    <div class="title">
+                      <h3
+                        class="tit"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                      >
+                        JENNIE
+                      </h3>
+                      <div
+                        class="deco"
+                        class="tit"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                      ></div>
+                    </div>
+                    <div
+                      class="content"
+                      data-aos="fade-left"
+                      data-aos-delay="500"
+                      data-aos-duration="1000"
+                    >
+                      <p class="cont">
+                        All around JENNIE, K-pop icon <br />
+                        whose fame whips up crowds and stirs hearts, everything
+                        sparkles. <br />
+                        The paparazzi flashes and the lights on stage, <br />
+                        all reveal the speed and effervescence of her daily
+                        life.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="page page02">
+                  <div
+                    class="butterfly1"
+                    data-aos="zoom-in-left"
+                    data-aos-delay="1000"
+                    data-aos-duration="1000"
+                  ></div>
+                  <div
+                    class="butterfly2"
+                    data-aos="zoom-in-left"
+                    data-aos-delay="500"
+                    data-aos-duration="1000"
+                  ></div>
+                </div>
+                <div class="page page03">
+                  <div class="old-house"></div>
+                  <div class="jennie-img02"></div>
+                  <div class="set">
+                    <p class="cont">
+                      My first solo came out when I was 22 and <br />
+                      we started our new world tour with blackpink in 2022.
+                      <br />
+                      To me, 22 means a new beginning.
+                    </p>
+                    <div class="jennie-img03"></div>
+                    <div class="txt-deco"></div>
+                  </div>
+                  <video autoplay loop id="jennie-img03">
+                    <source
+                      src="./assets/video/제니-profile.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="tit">
-            <h2 class="txt1">CHANEL22 BAG</h2>
-            <p class="txt2">
-              The year of its creation, <br />
-              2022 Imagined by Virginie Viard
-            </p>
+          <div id="scene03">
+            <video
+              style="width: 100vw; height: 100vh"
+              autoplay
+              loop
+              muted
+              id="scene03_video"
+            >
+              <source src="./assets/video/lily-trim01.mp4" type="video/mp4" />
+            </video>
+            <div class="trigger-box-3">
+              <div class="fix-box-3">
+                <div class="page page01">
+                  <div class="inner">
+                    <div class="title">
+                      <h3
+                        class="tit"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                      >
+                        LILY ROSE
+                      </h3>
+                      <div
+                        class="deco"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                      ></div>
+                    </div>
+                    <div
+                      class="content"
+                      data-aos="fade-left"
+                      data-aos-delay="500"
+                      data-aos-duration="1000"
+                    >
+                      <p class="cont">
+                        From the kiss of dawn to the rays of a setting sun in
+                        Los Angeles, <br />
+                        Lily-Rose Depp personifies the privilege of youth,
+                        <br />
+                        when clocks do not have the monopoly over time.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="page page01-2"></div>
+                <div class="page page02">
+                  <div class="rose1"></div>
+                  <div class="rose2"></div>
+                  <div class="lily-img01"></div>
+                </div>
+                <div class="page page03">
+                  <div class="rose3"></div>
+                  <div class="rose4"></div>
+                  <div class="set">
+                    <p class="cont">
+                      I feel like I could bring this bag anywhere! <br />
+                      To work, to stroll around alone, <br />
+                      to sit and read in a park,
+                      <br />
+                      on a date, even to the beach!
+                    </p>
+                    <div class="lily-img02"></div>
+                  </div>
+                  <video autoplay loop id="lily-img03">
+                    <source
+                      src="./assets/video/릴리로즈-profile.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="btn">
-            <button class="btn-icon"></button>
-            <p class="btn-desc">PRESS AND HOLD TO DISCOVER</p>
-          </div>
-        </div>
-        <header id="header">
-          <h1 id="logo">
-            <a href="#">
-              <p class="blind">CHANEL</p>
-              <img
-                src="./assets/images/comm/chanel-logo@4x.png"
-                alt="chanel"
-                width="150px"
+          <div id="scene04">
+            <video
+              style="width: 100vw; height: 100vh"
+              autoplay
+              loop
+              muted
+              id="scene04_video"
+            >
+              <source
+                src="./assets/video/whitney-trim01.mp4"
+                type="video/mp4"
               />
-            </a>
-          </h1>
-          <div class="menu"></div>
-        </header>
-        <div id="scene01">
-          <div class="inner">
-            <div class="inner1">
-              <div class="poster1"></div>
-              <div class="content1">
-                <p class="desc">
-                  In the sagacity of cities, <br />
-                  the plenitude of open spaces or the daydream of a villa,
-                  <br />
-                  CHANEL ambassadors Whitney Peak, Margaret Qualley, <br />
-                  Lily-Rose Depp and JENNIE play the game of autobiographical
-                  fiction.
-                </p>
+            </video>
+            <div class="trigger-box-4">
+              <div class="fix-box-4">
+                <div class="page page01">
+                  <div class="inner">
+                    <div class="title">
+                      <h3
+                        class="tit"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                      >
+                        WHITNEY
+                      </h3>
+                      <div
+                        class="deco"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                      ></div>
+                    </div>
+                    <div
+                      class="content"
+                      data-aos="fade-left"
+                      data-aos-delay="500"
+                      data-aos-duration="1000"
+                    >
+                      <p class="cont">
+                        Between city wanderings and trips out with friends,
+                        <br />
+                        Whitney Peak adopts a carefree and loquacious attitude
+                        <br />
+                        as she walks around New York.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="page page02">
+                  <div class="emoji1"></div>
+                  <div class="emoji2"></div>
+                </div>
+                <div class="page page03">
+                  <div class="txt-deco"></div>
+                  <div class="whitney-img01"></div>
+                  <div class="whitney-img02"></div>
+                  <div class="set">
+                    <div class="whitney-img03"></div>
+                    <p class="cont">
+                      This might be my favourite CHANEL bag so far. <br />
+                      I'm a huge fan of functional pieces and tend to travel
+                      <br />
+                      with my life in my bag.
+                    </p>
+                  </div>
+                  <video autoplay loop id="whitney-img04">
+                    <source
+                      src="./assets/video/휘트니-profile.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
               </div>
-            </div>
-            <div class="inner2">
-              <div class="content2">
-                <p class="desc">
-                  Like a page of a diary written in an affable, imaginary ink,
-                  <br />
-                  they tell their stories, and ours. <br />
-                  <br />
-                  On their arm, the CHANEL 22 bag, <br />
-                  a genuine ally for daily life captured by Inez Vinoodh through
-                  four films.
-                </p>
-                <div class="highlight"></div>
-              </div>
-              <div class="poster2"></div>
             </div>
           </div>
-        </div>
-        <div id="scene02">
-          <div class="trigger-box-2">
-            <div class="fix-box-2">
-              <div class="page page01">
+          <div id="scene05">
+            <video
+              style="width: 100vw; height: 100vh"
+              autoplay
+              loop
+              muted
+              id="scene05_video"
+            >
+              <source
+                src="./assets/video/margaret-trim01.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="trigger-box-5">
+              <div class="fix-box-5">
+                <div class="page page01">
+                  <div
+                    class="inner"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                  >
+                    <div class="title">
+                      <h3
+                        class="tit"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                      >
+                        MARGARET
+                      </h3>
+                      <div
+                        class="deco"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                      ></div>
+                    </div>
+                    <div
+                      class="content"
+                      data-aos="fade-left"
+                      data-aos-delay="500"
+                      data-aos-duration="1000"
+                    >
+                      <p class="cont">
+                        Echoing her childhood in a ranch in Montana, <br />
+                        Margaret Qualley escapes to the desert, <br />
+                        the ideal setting for a reunion with nature.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="page page01-2">
+                  <div class="emoji1"></div>
+                  <div class="emoji2"></div>
+                </div>
+                <div class="page page02">
+                  <div class="margaret-img01"></div>
+                  <div class="margaret-img02"></div>
+                </div>
+                <div class="page page03">
+                  <div class="set">
+                    <div class="margaret-img03"></div>
+                    <p class="cont">
+                      The CHANEL 22 bag is a perfect example <br />
+                      of Virginie viard's natural ability <br />
+                      to create pieces that empower women. <br />
+                      This is a bag that accommodates a woman's every need.
+                    </p>
+                  </div>
+                  <video autoplay loop id="margaret-img06">
+                    <source
+                      src="./assets/video/마가렛-profile.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="scene06">
+            <div class="page page01">
+              <div class="bag01"></div>
+              <div class="bag02"></div>
+            </div>
+            <div class="page page02">
+              <div class="sect1">
                 <div class="inner">
                   <div class="title">
-                    <h3 class="tit">JENNIE</h3>
-                    <div class="deco"></div>
+                    <h3 class="tit">The codes of the house</h3>
+                    <p class="desc">
+                      The quilted leather, the metal chain interlaced with
+                      leather and a “CHANEL Paris” medallion with an openwork
+                      double C make it a true object of desire.
+                    </p>
+                    <div class="by"></div>
                   </div>
-                  <div class="content">
-                    <p class="cont">
-                      All around JENNIE, K-pop icon <br />
-                      whose fame whips up crowds and stirs hearts, everything
-                      sparkles. <br />
-                      The paparazzi flashes and the lights on stage, <br />
-                      all reveal the speed and effervescence of her daily life.
+                  <div class="bag03"></div>
+                </div>
+              </div>
+              <div class="sect2">
+                <div class="inner">
+                  <div class="bag04"></div>
+                  <div class="title">
+                    <h3 class="tit">Light and supple</h3>
+                    <p class="desc">
+                      An extremely supple yet resistant leather combining
+                      simplicity and comfort.
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="page page02">
-                <div class="butterfly1"></div>
-                <div class="butterfly2"></div>
+              <div class="sect3">
+                <div class="inner">
+                  <div class="title">
+                    <h3 class="tit">Emblematic signature</h3>
+                    <p class="desc">
+                      The letters of "CHANEL", composed of gold or lacquered
+                      metal.
+                    </p>
+                  </div>
+                  <div class="bag05"></div>
+                  <a href="#" class="btn-see-more"></a>
+                </div>
               </div>
-              <div class="page page03">
-                <div class="old-house"></div>
-                <div class="jennie-img02"></div>
-                <div class="txt-deco"></div>
+              <div class="sect4">
+                <div class="inner">
+                  <div class="boutique-illust"></div>
+                  <div class="cont">
+                    <h3 class="tit">Discover more in boutiques</h3>
+                    <p class="desc">
+                      Our creations are thoughtfully curated by each of our
+                      boutiques.
+                      <br />
+                      To discover more, we invite you to find the boutique
+                      nearest you.
+                    </p>
+                    <div class="btn">
+                      <a href="#" class="btn-find-a-boutique"
+                        >find a boutique</a
+                      >
+                      <a href="#" class="btn-book-an-appointment">
+                        book an appointment
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="page page04">
-                <p class="cont">
-                  “my first solo came out when I was 22 and <br />
-                  we started our new world tour with blackpink in 2022. <br />
-                  To me, 22 means a new beginning.”
-                </p>
-                <div class="jennie-img03"></div>
-                <video autoplay loop id="jennie-img03">
-                  <source
-                    src="./assets/video/제니-profile.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-              <!-- <div class="page page05">
-                <div class="jennie-img04"></div>
-              </div> -->
             </div>
           </div>
         </div>
-        <div id="scene03"></div>
-        <div id="scene04"></div>
-        <div id="scene05"></div>
-        <div id="scene06"></div>
-        <div id="scene07"></div>
+        <footer id="footer">
+          <div class="inner">
+            <div class="grid-item upper">
+              <h1 class="logo"><a href="#">CHANEL</a></h1>
+            </div>
+            <div class="grid-item left-box">
+              <ul class="left">
+                <li class="left-item"><a href="#">CONTACT AN ADVISOR</a></li>
+                <li class="left-item"><a href="#">NEWS LETTER</a></li>
+                <li class="left-item"><a href="#">FIND A STORE</a></li>
+              </ul>
+            </div>
+            <div class="grid-item right-box">
+              <ul class="right">
+                <li class="right-item"><a href="#">EXPLORE CHANNEL.COM</a></li>
+                <li class="right-item"><a href="#">ONLINE SERVICES</a></li>
+                <li class="right-item"><a href="#">BOUTIQUE SERVICES</a></li>
+                <li class="right-item"><a href="#">THE HOUSE OF CHANEL</a></li>
+              </ul>
+            </div>
+            <div class="grid-item bottom">
+              <form action="#">
+                <label for="locationLanguage"
+                  >Change location and language</label
+                >
+                <select name="locationLanguage" id="locationLanguage">
+                  <option value="US">United States - English (US)</option>
+                  <option value="FR">France - French</option>
+                  <option value="KO">Korea - Korean</option>
+                  <option value="JA">Janpan - Japanese</option>
+                </select>
+              </form>
+            </div>
+          </div>
+        </footer>
+        <div id="cursor">
+          <strong class="circle" data-splitting="chars"></strong>
+        </div>
       </div>
-      <footer id="footer"></footer>
     </div>
   </body>
 </html>
