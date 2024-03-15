@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD033 -->
-<img src="./assets/images/comm/CHANNEL-LOGO-BLACK@4x.png" width="8%">
+<img src="./assets/images/comm/CHANNEL-LOGO-BLACK@4x.png" width="5%">
 
 <h1 align="center">CHANEL 22 BAG 캠페인 페이지</h1>
 <br>
