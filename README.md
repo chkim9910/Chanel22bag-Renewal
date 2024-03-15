@@ -23,9 +23,9 @@
 <h2>Technology Stack</h2>
 
 - **Design tool** <br><br>
-  - Figma
+  - Figma<br>
     <img height="32" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/figma.svg" />
-  - Photoshop
+  - Photoshop<br>
     <img height="32" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/adobephotoshop.svg" />
     <br>
 - **Web Development Technologies** <br><br>
