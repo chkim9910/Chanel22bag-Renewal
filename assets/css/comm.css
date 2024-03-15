@@ -818,156 +818,18 @@ strong.circle:before {
   font-size: 24px;
   color: #fff;
 }
-#scene03 .page01 .deco {
-  right: -139px;
-  width: 240px;
-}
-#scene03 .page01-2 {
-  width: 900px;
-}
-#scene03 .page02 {
-  width: 100vw;
-  position: relative;
-  background: url(../images/sect3/lilyrose02.png) no-repeat 0 0 / cover;
-}
-#scene03 .page02 .rose1 {
-  position: absolute;
-  top: 40%;
-  left: -22%;
-  width: 303px;
-  height: 292px;
-  background: url(../images/sect3/channel-flower-white@4x.png) no-repeat 0 0 /
-    cover;
-  opacity: 0.8;
-  animation: roseRotate 5s linear infinite;
-}
-#scene03 .page02 .rose2 {
-  position: absolute;
-  top: 66%;
-  left: -6%;
-  width: 283px;
-  height: 273px;
-  background: url(../images/sect3/channel-flower-white@4x.png) no-repeat 0 0 /
-    cover;
-  transform: rotate(43deg) scale(0.8);
-  opacity: 0.8;
-  animation: roseRotate2 7s linear infinite;
-}
-@keyframes roseRotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes roseRotate2 {
-  to {
-    transform: rotate(-360deg) scale(0.8);
-  }
-}
-#scene03 .page02 .lily-img01 {
-  position: absolute;
-  top: 100px;
-  left: 84%;
-  z-index: 1;
-  width: 800px;
-  height: 500px;
-  background: url(../images/sect3/lilyrose01.png) no-repeat 0 0 / cover;
-}
-#scene03 .page03 {
-  width: 2300px;
-  position: relative;
-  background: #000;
-}
-#scene03 .page03 .set {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 800px;
-  position: absolute;
-  top: 10px;
-  left: 800px;
-  justify-content: end;
-  gap: 20px;
-  padding-bottom: 100px;
-}
-#scene02 .page04 .cont {
-  width: 685px;
-  height: 204px;
-  word-wrap: normal;
-  word-break: keep-all;
-  font-family: "Pretendard-thin";
-  font-size: 30px;
-  line-height: 150%;
-  color: #fff;
-}
-#scene04 .page01 .deco {
-  right: -123px;
-  width: 221px;
-  height: 124px;
-}
-#scene04 .page02 {
-  width: 900px;
-  position: relative;
-}
-#scene04 .page02 .emoji1 {
-  position: absolute;
-  top: 40%;
-  left: -1%;
-  width: 253px;
-  height: 273px;
-  background: url(../images/sect2/butterfly3-white.png) no-repeat 0 0 / cover;
-  opacity: 0.8;
-}
-#scene04 .page02 .emoji2 {
-  position: absolute;
-  top: 60%;
-  left: -17%;
-  width: 340px;
-  height: 330px;
-  background: url(../images/sect2/butterfly2-white.png) no-repeat 0 0 / cover;
-  opacity: 0.5;
-}
-#scene04 .page03 {
-  width: 3600px;
-  padding-left: 300px;
-  position: relative;
-  background: #000;
-}
-#scene04 .page03 .whitney-img01 {
-  width: 620px;
-  height: 100vh;
-  background: url(../images/sect4/whitney01.png) no-repeat 70% 0 / cover;
-}
-#scene04 .page03 .whitney-img02 {
-  width: 964px;
-  height: 542px;
-  background: url(../images/sect4/whitney02.png) no-repeat 70% 0 / cover;
-  position: absolute;
-  bottom: 70px;
-  left: 780px;
-}
-#scene04 .page03 .set {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 800px;
-  position: absolute;
-  top: 10px;
-  left: 1990px;
-  justify-content: start;
-  gap: 20px;
-  padding-top: 100px;
-}
-#scene04 .page03 .cont {
-  font-family: "couture-it";
-  font-size: 24px;
-  color: #fff;
-}
-#scene04 .page03 .whitney-img03 {
+#scene02 .page03 .jennie-img03 {
   width: 680px;
   height: 380px;
-  background: url(../video/whitney-trim01.gif) no-repeat 0 0 / cover;
+  background: url(../video/JENNIE-trim02.gif) no-repeat 0 0 / cover;
+}
+#scene02 .page03 #jennie-img03 {
+  position: absolute;
+  top: 0;
+  right: -5%;
+  height: 900px;
+  width: 700px;
 }
 #scene02 .page05 .jennie-img04 {
   height: 100vh;
-  background: url(../images/sect2/제니-profile.mp4) no-repeat 0 0 / cover;
 } /*# sourceMappingURL=comm.css.map */
