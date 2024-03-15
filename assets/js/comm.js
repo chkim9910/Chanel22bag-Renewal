@@ -383,6 +383,7 @@ $(document).ready(function () {
   // .to($("#footer"), { zIndex: 0 });
 });
 
+// cursor
 const cursor = document.getElementById("cursor");
 const links = document.getElementsByTagName("a");
 const buttons = document.getElementsByTagName("button");
