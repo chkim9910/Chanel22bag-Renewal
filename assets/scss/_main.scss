@@ -1,5 +1,6 @@
 #intro {
   position: fixed;
+  // 주석 풀기
   z-index: 1000;
   width: 1920px;
   height: 100vh;
@@ -60,14 +61,18 @@
 
 #scene01 {
   position: relative;
-  height: 200vh;
+  height: 250vh;
+  background-attachment: fixed;
   background: url(../images/sect1/buildings-with-lights-landscape-high-angle.jpg)
-    no-repeat 50% 50% / 120%;
+    no-repeat 50% 50% / 200%;
+  z-index: 10;
 
+  perspective: 1000px;
+  transform: translateZ(-2px);
   &:after {
     display: block;
     content: "";
-    height: 200vh;
+    height: 250vh;
     width: 100%;
     background: rgb(0, 0, 0, 0.4);
     backdrop-filter: blur(0.5px);
@@ -122,37 +127,22 @@
 }
 
 #scene02 {
+  #scene02_video {
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    opacity: 0.6;
+  }
+  .trigger-box-2 {
+    z-index: 1;
+  }
   .page01 {
-    display: flex;
-    align-items: center;
-    .inner {
-      display: flex;
-      gap: 145px;
-      align-items: center;
-    }
-    .title {
-      position: relative;
-    }
-    .tit {
-      @include tit-it(60px);
-    }
-    .deco {
-      position: absolute;
-      top: 24%;
-      right: -110px;
-      width: 192px;
-      height: 122px;
-      background: url(../images//sect2/jennie.png) no-repeat 0 0 / cover;
-    }
-    .cont {
-      @include cont-thin(20px);
-    }
+    @include page01("../images/sect2/jennie.png");
   }
   .page02 {
-    width: 1500px;
-    // width: 2000px;
-    background: url(../images/sect2/제니1.png) no-repeat 0 0 / cover;
+    width: $pg2-width;
     position: relative;
+
     .butterfly1 {
       position: absolute;
       top: 40%;
@@ -175,22 +165,26 @@
     }
   }
   .page03 {
+    width: 3000px;
+    // width: 3500px;
+    // width: 240vw;
     position: relative;
+    background: $black;
     .old-house {
       position: absolute;
-      z-index: -1;
-      top: 57%;
-      left: -50px;
-      width: 567px;
+      // z-index: -1;
+      top: 58%;
+      // left: -280px;
+      width: 597px;
       height: 420px;
       background: url(../images/sect2/한옥-white.png) no-repeat 0 0 / cover;
-      opacity: 0.5;
+      opacity: 0.3;
     }
     .jennie-img02 {
       width: 970px;
       height: 628px;
       background: url(../images/sect2/제니2.png) no-repeat 0 0 / cover;
-      margin-left: 300px;
+      margin-left: 600px;
       position: relative;
       &:before {
         content: "";
@@ -203,44 +197,38 @@
         transform: scaleX(-1);
         position: absolute;
         top: 0;
-        left: -120px;
+        left: -200px;
       }
     }
-    .txt-deco {
-      width: 545px;
-      height: 180px;
-      background: url(../images/sect2/yeah.png) no-repeat 0 0 / cover;
-      transform: rotate(10deg);
+    .set {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 800px;
+      position: absolute;
+      top: 10px;
+      left: 1780px;
+      justify-content: end;
+      gap: 20px;
+      padding-bottom: 100px;
     }
-  }
-  .page04 {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding-bottom: 90px;
     .cont {
-      // width: 685px;
-      // height: 204px;
-      // word-wrap: normal;
-      // word-break: keep-all;
-      @include tit-it(24px);
+      width: 685px;
+      height: 204px;
+      word-wrap: normal;
+      word-break: keep-all;
+      @include cont-thin(30px);
     }
     .jennie-img03 {
       width: 680px;
       height: 380px;
       background: url(../video/JENNIE-trim02.gif) no-repeat 0 0 / cover;
     }
-    #jennie-img03 {
-      position: absolute;
-      top: 0;
-      right: -5%;
-      height: 900px;
-      width: 700px;
-    }
   }
   .page05 {
     .jennie-img04 {
       height: 100vh;
+      background: url(../images/sect2/제니-profile.mp4) no-repeat 0 0 / cover;
     }
   }
 }
