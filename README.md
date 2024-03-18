@@ -32,14 +32,14 @@
     <img height="32" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/adobephotoshop.svg" />
     <br>
 - **Web Development Technologies** <br><br>
-  - HTML5
+  - HTML5<br>
     <img height="32" width="24" src="https://unpkg.com/simple-icons@v11/icons/html5.svg" />
-  - CSS3
+  - CSS3<br>
     <img height="32" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/css3.svg" />
-  - SCSS
+  - SCSS<br>
     <img height="32" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/sass.svg" />
-  - JavaScript
+  - JavaScript<br>
     <img height="32" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/javascript.svg" />
-  - JQuery
+  - JQuery<br>
     <img height="32" width="24" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/jquery.svg" />
     <br>
